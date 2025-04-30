@@ -1,0 +1,297 @@
+{
+  "esercizi": {
+    "parte_superiore": {
+      "petto": [
+        {
+          "nome": "Push up",
+          "varianti": [
+            "standard",
+            "su ginocchia",
+            "diamond",
+            "triceps",
+            "decline (piedi su panca)",
+            "yoga",
+            "biceps",
+            "wall",
+            "knees",
+            "incline"
+          ]
+        },
+        { "nome": "Push back push up", "varianti": [] },
+        { "nome": "Release push up", "varianti": [] },
+        { "nome": "Side push up", "varianti": ["one arm"] },
+        { "nome": "Distensioni braccia in posizione prona", "varianti": [] },
+        { "nome": "Panca piana con peso", "varianti": ["cassa d'acqua"] },
+        {
+          "nome": "Croci manubri",
+          "varianti": ["croci in glute bridge", "con bottiglie"]
+        },
+        { "nome": "Spinte da seduto con peso", "varianti": ["cassa d'acqua"] }
+      ],
+      "schiena": [
+        { "nome": "Bar row", "varianti": ["single arm"] },
+        { "nome": "Row cassa d'acqua", "varianti": ["single arm"] },
+        {
+          "nome": "Pull up/trazioni",
+          "varianti": [
+            "negativa lenta",
+            "con salto",
+            "presa prona",
+            "presa supina",
+            "piedi a terra"
+          ]
+        },
+        { "nome": "Superman", "varianti": ["quadrupedia"] },
+        {
+          "nome": "Reverse hyperextension",
+          "varianti": ["su panca", "sul bordo del divano"]
+        },
+        { "nome": "Good morning", "varianti": ["con bottiglie", "con pesi"] },
+        { "nome": "Deadlift", "varianti": ["con peso"] },
+        {
+          "nome": "RDL (stacchi rumeni)",
+          "varianti": ["single leg", "con bottiglie", "con cassa d'acqua"]
+        }
+      ],
+      "spalle": [
+        {
+          "nome": "Alzate laterali",
+          "varianti": ["con bottiglie", "con pesi"]
+        },
+        { "nome": "Alzate a 90°", "varianti": ["con bottiglie"] },
+        { "nome": "Alzate a 360°", "varianti": ["con bottiglie"] },
+        { "nome": "Arnold press", "varianti": ["con bottiglie"] },
+        { "nome": "Wall angels", "varianti": [] },
+        { "nome": "Pike push up", "varianti": [] }
+      ],
+      "braccia": {
+        "tricipiti": [
+          {
+            "nome": "Dips",
+            "varianti": ["su panca", "su parallele", "gambe tese", "micro dips"]
+          },
+          {
+            "nome": "French press",
+            "varianti": ["su panca piana", "con bottiglie", "seduto"]
+          },
+          { "nome": "Triceps push up", "varianti": [] },
+          { "nome": "Triceps extension", "varianti": ["knee"] }
+        ],
+        "bicipiti": [
+          {
+            "nome": "Curl bicipiti",
+            "varianti": ["in piedi", "seduto", "panca scott (schienale sedia)"]
+          },
+          { "nome": "Hammer curl", "varianti": ["con bottiglie", "seduto"] }
+        ]
+      }
+    },
+    "parte_inferiore": {
+      "quadricipiti": [
+        {
+          "nome": "Squat",
+          "varianti": [
+            "air",
+            "jump",
+            "goblet (con cassa d'acqua)",
+            "con elastico",
+            "molleggiati",
+            "laterali",
+            "overhead",
+            "con bottiglie",
+            "con pesi",
+            "sumo",
+            "squat elastico e apri-chiudi"
+          ]
+        },
+        {
+          "nome": "Affondi",
+          "varianti": [
+            "avanti",
+            "dietro",
+            "laterali",
+            "incrociati",
+            "camminati"
+          ]
+        },
+        { "nome": "Wall sit", "varianti": [] },
+        { "nome": "Pistol squat", "varianti": ["su panca"] },
+        { "nome": "Bulgarian split squat", "varianti": [] },
+        { "nome": "Step up", "varianti": ["alternati"] },
+        { "nome": "Leg extension", "varianti": ["bodyweight"] }
+      ],
+      "femorali": [
+        {
+          "nome": "Hamstring curl",
+          "varianti": [
+            "standing curls femorali single leg elastico",
+            "bodyweight"
+          ]
+        },
+        {
+          "nome": "Glute bridge",
+          "varianti": [
+            "standard",
+            "monopodalico/single leg",
+            "con elastico",
+            "con peso",
+            "spalle appoggiate cassa d'acqua (hip thrust)",
+            "butterfly piedi su rialzo"
+          ]
+        }
+      ],
+      "glutei": [
+        {
+          "nome": "Kick back",
+          "varianti": ["gamba piegata", "gamba tesa", "con elastico"]
+        },
+        {
+          "nome": "Slanci laterali",
+          "varianti": [
+            "in piedi con elastico",
+            "in quadrupedia con elastico",
+            "sdraiato sul fianco con elastico"
+          ]
+        },
+        { "nome": "Passo granchio", "varianti": ["con elastico"] }
+      ],
+      "polpacci": [{ "nome": "Calf raise", "varianti": [] }]
+    },
+    "core": {
+      "addominali": [
+        {
+          "nome": "Crunch",
+          "varianti": [
+            "standard",
+            "talloni",
+            "laterali",
+            "doppio molleggio",
+            "molleggiati",
+            "obliqui",
+            "roll up",
+            "croci"
+          ]
+        },
+        { "nome": "Sit up", "varianti": [] },
+        { "nome": "Leg raise", "varianti": ["alle parallele"] },
+        { "nome": "Knee to chest", "varianti": ["dx/sx"] },
+        { "nome": "Bicycle crunch", "varianti": [] },
+        { "nome": "Mountain climbers", "varianti": [] },
+        {
+          "nome": "Plank",
+          "varianti": ["standard", "laterale", "commando", "twist", "rotation"]
+        },
+        {
+          "nome": "Abs sforbiciate",
+          "varianti": ["scissors", "scissors abs clap"]
+        },
+        { "nome": "Reverse crunch", "varianti": [] },
+        { "nome": "V crunch", "varianti": [] },
+        { "nome": "Hollow hold position", "varianti": [] },
+        { "nome": "Twist", "varianti": ["con peso"] },
+        { "nome": "Addominali ball", "varianti": [] },
+        { "nome": "Addominali alle parallele", "varianti": [] }
+      ],
+      "lombari": [
+        { "nome": "Superman", "varianti": [] },
+        { "nome": "Cobra position", "varianti": [] },
+        { "nome": "Distensioni braccia in superman position", "varianti": [] },
+        { "nome": "Bird dog", "varianti": [] }
+      ]
+    },
+    "cardio": [
+      { "nome": "Burpees", "varianti": [] },
+      { "nome": "Jumping jack", "varianti": ["alto-fuori"] },
+      { "nome": "Mountain climbers", "varianti": [] },
+      { "nome": "Skip", "varianti": ["lento", "alto"] },
+      { "nome": "Corsa sul posto", "varianti": [] },
+      { "nome": "Corsa calciata", "varianti": [] },
+      { "nome": "Step up", "varianti": ["alternati"] },
+      { "nome": "Bear walk", "varianti": ["knee touch in bear walk"] },
+      { "nome": "Crab extension arms", "varianti": [] },
+      { "nome": "Box jump", "varianti": ["over"] }
+    ],
+    "combinati": [
+      { "nome": "Thruster", "varianti": ["con bottiglie", "con pesi"] },
+      { "nome": "Push up + superman", "varianti": [] },
+      { "nome": "Squat thruster", "varianti": [] }
+    ],
+    "stretching_mobilita": [
+      { "nome": "Downdog plank", "varianti": [] },
+      { "nome": "Posa del bambino", "varianti": [] },
+      { "nome": "Rotazioni anca", "varianti": [] },
+      { "nome": "Pinocchietto", "varianti": [] },
+      { "nome": "Slancio gamba a 90°", "varianti": [] },
+      { "nome": "Rullata", "varianti": [] },
+      { "nome": "LYT", "varianti": [] }
+    ]
+  },
+  "video": [
+    {
+      "descrizione": "Stretching Total Body",
+      "url": "https://www.youtube.com/watch?v=EzM5ceStDOo"
+    },
+    {
+      "descrizione": "Stretching parte superiore del corpo",
+      "url": "https://www.youtube.com/watch?v=RDlnCDpPRKY"
+    },
+    {
+      "descrizione": "Stretching braccia e spalle",
+      "url": "https://www.youtube.com/watch?v=HE3dynK223o"
+    },
+    {
+      "descrizione": "Stretching Total Body completo",
+      "url": "https://www.youtube.com/watch?v=uugqNw2ESzM"
+    },
+    {
+      "descrizione": "Stretching per migliorare flessibilità ed elasticità",
+      "url": "https://www.youtube.com/watch?v=4jI-JrOqMX8"
+    },
+    {
+      "descrizione": "Esercizi addominali completi",
+      "url": "https://www.youtube.com/watch?v=-scf2sMa9gI"
+    },
+    {
+      "descrizione": "Riscaldamento completo",
+      "url": "https://www.youtube.com/watch?v=RDlnCDpPRKY"
+    },
+    {
+      "descrizione": "Riscaldamento specifico",
+      "url": "https://www.youtube.com/watch?v=v04PCM7Csoc"
+    },
+    {
+      "descrizione": "Riscaldamento breve",
+      "url": "https://www.youtube.com/watch?v=GL0tIOn0EaY"
+    },
+    {
+      "descrizione": "Andature specifiche",
+      "url": "https://www.youtube.com/watch?v=2fHe8iLe6F8"
+    }
+  ],
+  "attrezzi": [
+    "elastico",
+    "bottiglie come pesi",
+    "panca",
+    "sbarra per trazioni",
+    "parallele",
+    "cassa d'acqua",
+    "pesi",
+    "ball",
+    "rialzo"
+  ],
+  "formato_allenamento": [
+    {
+      "tipo": "Circuito",
+      "formato": "CXxY (dove X è numero del circuito, Y è numero di ripetizioni)",
+      "esempio": "C1x3, C2x4, ecc."
+    },
+    {
+      "tipo": "Tempi di lavoro",
+      "formati": [
+        "durata specifica (30\", 45\", 1')",
+        "EMOM (Every Minute On the Minute)",
+        "intervalli (30\" ON 20\" OFF)"
+      ]
+    }
+  ]
+}
