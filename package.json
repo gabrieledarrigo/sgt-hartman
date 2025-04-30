@@ -12,6 +12,8 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "date-fns": "^4.1.0",
+    "groq-sdk": "^0.20.1",
     "prettier": "^3.5.3"
   }
 }

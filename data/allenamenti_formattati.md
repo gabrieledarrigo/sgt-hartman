@@ -861,7 +861,7 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C1x3: 20 mountain climbers, 30 bicycle crunch, 10 slanci laterali in quadrupedia
 - C2x3: 20 glute bridge, 20 squat molleggiati, 20 alzate laterali
 - C3x3: 12 push up, 15 dips
-- C4x2: 10 french press, 10 arnold press, 20 curl biceps,
+- C4x2: 10 french press, 10 arnold press, 20 curl biceps
 
 **Allenamento 27 aprile 2025**
 
