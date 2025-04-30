@@ -9,7 +9,7 @@ type Esercizio = {
   tutorial?: {
     [key: string]: string;
   };
-}
+};
 
 type Categorie = {
   parte_superiore: string[];
@@ -18,14 +18,14 @@ type Categorie = {
   core: string[];
   movimento: string[];
   tipo: string[];
-}
+};
 
 type FormatoAllenamento = {
   tipo?: string;
   formato?: string;
   esempio?: string;
   formati?: string[];
-}
+};
 
 type Video = {
   descrizione?: string;
@@ -34,7 +34,7 @@ type Video = {
   parte?: string;
   descrizione_esercizi?: string;
   tipo?: string;
-}
+};
 
 type Esercizi = {
   esercizi: Esercizio[];
@@ -46,7 +46,7 @@ type Esercizi = {
   video_allenamento?: Video[];
   video_equilibrio?: Video[];
   video_mobilita?: Video[];
-}
+};
 
 const EXERCISES_FILE_PATH = join(__dirname, './data/esercizi.json');
 
@@ -62,5 +62,4 @@ async function main() {
   console.log(exercises);
 }
 
-await main()
-  .catch(err => console.error(err));
+await main().catch((err) => console.error(err));
