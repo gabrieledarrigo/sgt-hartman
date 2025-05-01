@@ -8,7 +8,7 @@ type Esercizio = {
   nome: string;
   categorie: string[];
   varianti: string[];
-  attrezzatura?: string[];
+  attrezzatura: string[];
   tutorial?: {
     [key: string]: string;
   };
@@ -31,12 +31,9 @@ type FormatoAllenamento = {
 };
 
 type Video = {
-  descrizione?: string;
-  url?: string;
-  durata?: string;
-  parte?: string;
-  descrizione_esercizi?: string;
-  tipo?: string;
+  descrizione: string;
+  url: string;
+  durata: string;
 };
 
 type Esercizi = {
@@ -44,11 +41,7 @@ type Esercizi = {
   categorie: Categorie;
   attrezzi: string[];
   formato_allenamento: FormatoAllenamento[];
-  video_stretching?: Video[];
-  video_riscaldamento?: Video[];
-  video_allenamento?: Video[];
-  video_equilibrio?: Video[];
-  video_mobilita?: Video[];
+  video: Video[];
 };
 
 const GROQ_API_KEY = Bun.env.GROQ_API_KEY;
