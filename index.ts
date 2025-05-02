@@ -1,55 +1,25 @@
-import { readFile } from 'fs/promises';
-import { join } from 'path';
 import Groq from "groq-sdk";
 import { format } from "date-fns";
 import { it } from "date-fns/locale"
+import { Database } from "bun:sqlite";
 
-type Esercizio = {
-  nome: string;
-  categorie: string[];
-  varianti: string[];
-  attrezzatura: string[];
-  tutorial?: {
-    [key: string]: string;
-  };
-};
-
-type Categorie = {
-  parte_superiore: string[];
-  braccia: string[];
-  parte_inferiore: string[];
-  core: string[];
-  movimento: string[];
-  tipo: string[];
-};
-
-type FormatoAllenamento = {
-  tipo?: string;
-  formato?: string;
-  esempio?: string;
-  formati?: string[];
-};
-
-type Video = {
-  descrizione: string;
-  url: string;
-  durata: string;
-};
-
-type Esercizi = {
-  esercizi: Esercizio[];
-  categorie: Categorie;
-  attrezzi: string[];
-  formato_allenamento: FormatoAllenamento[];
-  video: Video[];
+type Exercise = {
+  id: number;
+  name: string;
+  categories: string;
+  variations: string;
+  equipments: string;
 };
 
 const GROQ_API_KEY = Bun.env.GROQ_API_KEY;
-const EXERCISES_FILE_PATH = join(__dirname, './data/esercizi.json');
 
 const groq = new Groq({ apiKey: GROQ_API_KEY });
+const db = new Database("data/exercises.sqlite", {
+  create: true,
+  strict: true
+});
 
-async function generateExecise(exercises: Esercizi): Promise<string> {
+async function generateTraining(exercises: Exercise[]): Promise<string> {
   const completion = await groq.chat.completions.create({
     messages: [
       {
@@ -68,7 +38,6 @@ async function generateExecise(exercises: Esercizi): Promise<string> {
           DATI UTENTE:
           - Livello: intermedio
           - Durata desiderata: 60 minuti
-          - Attrezzatura: ${exercises.attrezzi.join(', ')}
 
           DATABASE ESERCIZI:
           ${JSON.stringify(exercises)}
@@ -85,7 +54,7 @@ async function generateExecise(exercises: Esercizi): Promise<string> {
           **Allenamento 14 aprile 2025**
           ### Riscaldamento
           - [10 Minuti di Riscaldamento Total Body o Mini Allenamento Per Principianti](https://www.youtube.com/watch?v=Uq86HTbUE8g&t=230s)
-          
+
           ### Parte Principale
           - C1x4: 10 push up, 20 squat, 20 crunch, 10 dips
           - C2x3: 20 calf raise, 15 kick back gamba piegata, 10 affondi per gamba
@@ -94,7 +63,7 @@ async function generateExecise(exercises: Esercizi): Promise<string> {
           **Allenamento 16 aprile 2025**
           ### Riscaldamento
           - [Esercizi Di Riscaldamento Total Body Senza Salti (7 Minuti)](https://www.youtube.com/watch?v=xWPkMyyZDzM)
-          
+
           ### Parte Principale
           - C1x3: 20 mountain climbers, 30 bicycle crunch, 10 slanci laterali in quadrupedia
           - C2x3: 20 glute bridge, 20 squat molleggiati, 20 alzate laterali
@@ -104,7 +73,7 @@ async function generateExecise(exercises: Esercizi): Promise<string> {
 
           Crea un allenamento completo con riscaldamento, parte principale e stretching finale. 
           Indica serie, ripetizioni e tempi di recupero per ogni esercizio usando il seguente formato Markdown:
-          
+
           **Allenamento [data in in italiano in formato EEEE dd LLLL yyyy]**
           ### Riscaldamento
           - [Dettaglio riscaldamento]
@@ -125,7 +94,7 @@ async function generateExecise(exercises: Esercizi): Promise<string> {
 
           ### Stretching (5 minuti)
           - [Dettaglio stretching]
-          
+
           Non aggiungere note o spiegazioni aggiuntive.
         `,
       },
@@ -136,15 +105,23 @@ async function generateExecise(exercises: Esercizi): Promise<string> {
   return completion.choices[0]?.message?.content || "Impossibile generare un esercizio.";
 }
 
-async function getExercises(): Promise<Esercizi> {
-  const exercises = await readFile(EXERCISES_FILE_PATH, 'utf8');
+function getExercises(): Exercise[] {
+  const query = db.query<Exercise, {}>(`
+    SELECT id, name, categories, variations, equipments
+    FROM exercises;
+  `);
 
-  return JSON.parse(exercises);
+  return query.all({}).map((exercise) => ({
+    ...exercise,
+    categories: JSON.parse(exercise.categories),
+    variations: JSON.parse(exercise.variations),
+    equipments: JSON.parse(exercise.equipments),
+  }));
 }
 
 async function main() {
-  const exercises = await getExercises();
-  const training = await generateExecise(exercises);
+  const exercises = getExercises();
+  const training = await generateTraining(exercises);
 
   console.log(training);
 }

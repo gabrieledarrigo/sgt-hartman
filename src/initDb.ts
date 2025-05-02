@@ -26,7 +26,6 @@ type Esercizi = {
 
 const EXERCISES_FILE_PATH = join(__dirname, '../data/esercizi.json');
 
-
 const db = new Database("data/exercises.sqlite", {
   create: true,
   strict: true
