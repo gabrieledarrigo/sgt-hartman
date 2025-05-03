@@ -26,7 +26,7 @@ type Exercises = {
 
 const EXERCISES_FILE_PATH = join(__dirname, '../data/exercises.json');
 
-const db = new Database('data/exercises.sqlite', {
+const db = new Database('data/sgt.hartman.sqlite', {
   create: true,
   strict: true,
 });
@@ -61,11 +61,18 @@ function createTables(): void {
       type TEXT NOT NULL,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
     );
+
+    CREATE TABLE IF NOT EXISTS trainings (
+      id INTEGER PRIMARY KEY NOT NULL,
+      training TEXT NOT NULL,
+      date TIMESTAMP NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+    );
   `);
 }
 
 function storeExercises(exercise: Exercise): void {
-  const insert = db.query(
+  const insert = db.prepare(
     `
       INSERT INTO exercises (name, categories, variations, equipments)
       VALUES (:name, :categories, :variations, :equipments);
@@ -81,7 +88,7 @@ function storeExercises(exercise: Exercise): void {
 }
 
 function storeVideo(video: Video): void {
-  const insert = db.query(
+  const insert = db.prepare(
     `
       INSERT INTO videos (description, url, duration)
       VALUES (:description, :url, :duration);
@@ -96,7 +103,7 @@ function storeVideo(video: Video): void {
 }
 
 function storeEquipments(type: string): void {
-  const insert = db.query(
+  const insert = db.prepare(
     `
       INSERT INTO equipments (type)
       VALUES (:type);

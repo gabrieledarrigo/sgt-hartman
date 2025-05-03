@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "format": "prettier --write .",
-    "initdb": "bun run src/initdb.ts"
+    "initdb": "bun run src/initDb.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
