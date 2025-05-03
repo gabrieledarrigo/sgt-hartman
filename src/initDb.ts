@@ -1,4 +1,4 @@
-import { Database } from "bun:sqlite";
+import { Database } from 'bun:sqlite';
 import { join } from 'node:path';
 import { readFile } from 'node:fs/promises';
 
@@ -26,9 +26,9 @@ type Esercizi = {
 
 const EXERCISES_FILE_PATH = join(__dirname, '../data/esercizi.json');
 
-const db = new Database("data/exercises.sqlite", {
+const db = new Database('data/exercises.sqlite', {
   create: true,
-  strict: true
+  strict: true,
 });
 
 async function getExercises(): Promise<Esercizi> {
@@ -63,7 +63,7 @@ function storeExercises(exercise: Esercizio): void {
     `
       INSERT INTO exercises (name, categories, variations, equipments)
       VALUES (:name, :categories, :variations, :equipments);
-    `
+    `,
   );
 
   insert.run({
@@ -71,7 +71,7 @@ function storeExercises(exercise: Esercizio): void {
     categories: JSON.stringify(exercise.categorie),
     variations: JSON.stringify(exercise.varianti),
     equipments: JSON.stringify(exercise.attrezzatura || []),
-  })
+  });
 }
 
 function storeVideo(video: Video): void {
@@ -79,14 +79,14 @@ function storeVideo(video: Video): void {
     `
       INSERT INTO video_tutorials (description, url, duration)
       VALUES (:description, :url, :duration);
-    `
+    `,
   );
 
   insert.run({
     description: video.descrizione,
     url: video.url,
     duration: video.durata,
-  })
+  });
 }
 
 async function initDb(): Promise<void> {
@@ -108,4 +108,4 @@ await initDb()
   .catch((err) => console.error(err))
   .finally(() => {
     db.close();
-  })
+  });

@@ -1,7 +1,7 @@
-import Groq from "groq-sdk";
-import { format } from "date-fns";
-import { it } from "date-fns/locale"
-import { Database } from "bun:sqlite";
+import Groq from 'groq-sdk';
+import { format } from 'date-fns';
+import { it } from 'date-fns/locale';
+import { Database } from 'bun:sqlite';
 
 type Exercise = {
   id: number;
@@ -14,24 +14,24 @@ type Exercise = {
 const GROQ_API_KEY = Bun.env.GROQ_API_KEY;
 
 const groq = new Groq({ apiKey: GROQ_API_KEY });
-const db = new Database("data/exercises.sqlite", {
+const db = new Database('data/exercises.sqlite', {
   create: true,
-  strict: true
+  strict: true,
 });
 
 async function generateTraining(exercises: Exercise[]): Promise<string> {
   const completion = await groq.chat.completions.create({
     messages: [
       {
-        role: "system",
+        role: 'system',
         content: `
           Sei un personal trainer esperto e capace, specializzato nell'allenamento a corpo libero.
           Il tuo compito è generare allenamenti partendo un database di esercizi in formato JSON che ti verrà allegato nel corpo di ogni richiesta.
           Oltre al database, ti verrò fornito un elenco degli ultimi 2 o 3 allenamenti recenti così che tu possa generare un allenamento equilibrato.
-          `
+          `,
       },
       {
-        role: "user",
+        role: 'user',
         content: `
           Genera un allenamento per oggi: ${format(new Date(), 'EEEE dd LLLL yyyy', { locale: it })} basato sui miei dati storici.
 
@@ -99,10 +99,13 @@ async function generateTraining(exercises: Exercise[]): Promise<string> {
         `,
       },
     ],
-    model: "llama-3.3-70b-versatile",
+    model: 'llama-3.3-70b-versatile',
   });
 
-  return completion.choices[0]?.message?.content || "Impossibile generare un esercizio.";
+  return (
+    completion.choices[0]?.message?.content ||
+    'Impossibile generare un esercizio.'
+  );
 }
 
 function getExercises(): Exercise[] {
