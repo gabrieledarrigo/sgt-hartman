@@ -2,36 +2,36 @@ import { Database } from 'bun:sqlite';
 import { join } from 'node:path';
 import { readFile } from 'node:fs/promises';
 
-type Esercizio = {
-  nome: string;
-  categorie: string[];
-  varianti: string[];
-  attrezzatura: string[];
-  tutorial?: {
+type Exercise = {
+  name: string;
+  categories: string[];
+  variants: string[];
+  equipments: string[];
+  video?: {
     [key: string]: string;
   };
 };
 
 type Video = {
-  descrizione: string;
+  description: string;
   url: string;
-  durata: string;
+  duration: string;
 };
 
-type Esercizi = {
-  esercizi: Esercizio[];
-  attrezzi: string[];
+type Exercises = {
+  exercises: Exercise[];
+  equipments: string[];
   video: Video[];
 };
 
-const EXERCISES_FILE_PATH = join(__dirname, '../data/esercizi.json');
+const EXERCISES_FILE_PATH = join(__dirname, '../data/exercises.json');
 
 const db = new Database('data/exercises.sqlite', {
   create: true,
   strict: true,
 });
 
-async function getExercises(): Promise<Esercizi> {
+async function getExercises(): Promise<Exercises> {
   const exercises = await readFile(EXERCISES_FILE_PATH, 'utf8');
 
   return JSON.parse(exercises);
@@ -48,17 +48,23 @@ function createTables(): void {
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
     );
     
-    CREATE TABLE IF NOT EXISTS video_tutorials (
+    CREATE TABLE IF NOT EXISTS videos (
       id INTEGER PRIMARY KEY NOT NULL,
       description TEXT NOT NULL,
       url TEXT NOT NULL,
-      duration TEXT NOT NULL,
+      duration INTEGER NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS equipments (
+      id INTEGER PRIMARY KEY NOT NULL,
+      type TEXT NOT NULL,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
     );
   `);
 }
 
-function storeExercises(exercise: Esercizio): void {
+function storeExercises(exercise: Exercise): void {
   const insert = db.query(
     `
       INSERT INTO exercises (name, categories, variations, equipments)
@@ -67,25 +73,38 @@ function storeExercises(exercise: Esercizio): void {
   );
 
   insert.run({
-    name: exercise.nome,
-    categories: JSON.stringify(exercise.categorie),
-    variations: JSON.stringify(exercise.varianti),
-    equipments: JSON.stringify(exercise.attrezzatura || []),
+    name: exercise.name,
+    categories: JSON.stringify(exercise.categories),
+    variations: JSON.stringify(exercise.variants),
+    equipments: JSON.stringify(exercise.equipments || []),
   });
 }
 
 function storeVideo(video: Video): void {
   const insert = db.query(
     `
-      INSERT INTO video_tutorials (description, url, duration)
+      INSERT INTO videos (description, url, duration)
       VALUES (:description, :url, :duration);
     `,
   );
 
   insert.run({
-    description: video.descrizione,
+    description: video.description,
     url: video.url,
-    duration: video.durata,
+    duration: video.duration,
+  });
+}
+
+function storeEquipments(type: string): void {
+  const insert = db.query(
+    `
+      INSERT INTO equipments (type)
+      VALUES (:type);
+    `,
+  );
+
+  insert.run({
+    type,
   });
 }
 
@@ -93,13 +112,17 @@ async function initDb(): Promise<void> {
   const exercises = await getExercises();
   createTables();
 
-  db.transaction((exercises: Esercizi) => {
-    for (const exercise of exercises.esercizi) {
+  db.transaction((exercises: Exercises) => {
+    for (const exercise of exercises.exercises) {
       storeExercises(exercise);
     }
 
     for (const video of exercises.video) {
       storeVideo(video);
+    }
+
+    for (const equipment of exercises.equipments) {
+      storeEquipments(equipment);
     }
   })(exercises);
 }
