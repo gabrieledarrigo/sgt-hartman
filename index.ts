@@ -11,6 +11,10 @@ type Exercise = {
   equipments: string;
 };
 
+type Equipment = {
+  type: string;
+};
+
 const GROQ_API_KEY = Bun.env.GROQ_API_KEY;
 
 const groq = new Groq({ apiKey: GROQ_API_KEY });
@@ -19,7 +23,10 @@ const db = new Database('data/exercises.sqlite', {
   strict: true,
 });
 
-async function generateTraining(exercises: Exercise[]): Promise<string> {
+async function generateTraining(
+  exercises: Exercise[],
+  equipments: string[],
+): Promise<string> {
   const completion = await groq.chat.completions.create({
     messages: [
       {
@@ -41,6 +48,9 @@ async function generateTraining(exercises: Exercise[]): Promise<string> {
 
           DATABASE ESERCIZI:
           ${JSON.stringify(exercises)}
+
+          ATTREZZATURA:
+          ${JSON.stringify(equipments)}
 
           ALLENAMENTI RECENTI:
           **Allenamento 4 aprile 2025**
@@ -110,9 +120,19 @@ function getExercises(): Exercise[] {
   }));
 }
 
+function getEquipments(): string[] {
+  const query = db.query<Equipment, {}>(`
+    SELECT type
+    FROM equipments;
+  `);
+
+  return query.all({}).map((equipment) => equipment.type);
+}
+
 async function main() {
   const exercises = getExercises();
-  const training = await generateTraining(exercises);
+  const equipments = getEquipments();
+  const training = await generateTraining(exercises, equipments);
 
   console.log(training);
 }
