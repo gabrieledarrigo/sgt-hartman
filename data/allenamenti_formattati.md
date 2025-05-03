@@ -1,7 +1,5 @@
 # Allenamenti
 
-## Programmazione 2023
-
 **Allenamento 9 ottobre 2023**
 
 - 1 giro di corsa
@@ -89,8 +87,6 @@ Seguiamo le andature di questo video:
 - C2x3: (1’ rest): 8 push up, 20 crunch talloni, 8 push up
 - C3x4: 10 bar row
 
-## Programmazione 2024
-
 **Allenamento 1 gennaio 2024**
 
 - Riscaldamento: segui questo video [https://www.youtube.com/watch?v=RDlnCDpPRKY](https://www.youtube.com/watch?v=RDlnCDpPRKY)
@@ -102,15 +98,10 @@ Seguiamo le andature di questo video:
 
 **Allenamento 5 gennaio 2024**
 
-**PARTE I**
-
 - Riscaldamento: segui questo video dal minuto 5 al minuto 15 [https://www.youtube.com/watch?v=v04PCM7Csoc](https://www.youtube.com/watch?v=v04PCM7Csoc)
 - C1x3: (90’’ rest): 15 leg raise, 10 knees to chest, 20 bicycle crunch, 30’’ plank. Cerca di non fare pause intermedie troppo lunghe.
 - C2x3: 10 bar row, 10 push up, 10 trazioni piedi a terra ([https://www.youtube.com/watch?v=E_mdAsjzkHM](https://www.youtube.com/watch?v=E_mdAsjzkHM))
 - Stretching: segui questo video [https://www.youtube.com/watch?v=WtrXCtYV4rI](https://www.youtube.com/watch?v=WtrXCtYV4rI)
-
-**PARTE II**
-
 - C3x4: 5 squat, 10 affondi (scegli tu se avanti o indietro)
 - Stretching: segui questo video [https://www.youtube.com/watch?v=F6xF5g0XQGo](https://www.youtube.com/watch?v=F6xF5g0XQGo)
 
@@ -144,7 +135,7 @@ Seguiamo le andature di questo video:
 - C1x3: (megacircuito 10 esercizi): 15 squat elastico, 15 slanci laterali in quadrupedia elastico ([https://www.youtube.com/watch?v=li6_OYwtNDU](https://www.youtube.com/watch?v=li6_OYwtNDU)), 15 stacchi con bottiglie, 15 good morning con bottiglie, 15 Arnold press bottiglie, 15 alzate a 90° bottiglie, 15 leg raise, 15 crunch laterali, 15 push up, 15 dips panca.
 - Stretching
 
-**Allenamento venerdì26/01/2024**
+**Allenamento venerdì 26 gennaio 2024**
 
 - [Esercizi di Stretching: 25 Minuti Con Esercizi di Stretching Total Body](https://www.youtube.com/watch?v=EzM5ceStDOo)
 
@@ -217,13 +208,13 @@ Seguiamo le andature di questo video:
   N.B. Se vuoi aumentare il volume di allenamento aggiungi un giro ad ogni circuito, per cui fai 4 set anziché 3\.
 - Stretching
 
-**Allenamento 5 marzo 2024 (\- Self made)**
+**Allenamento 5 marzo 2024**
 
 - C1x3: 15 push up, 15 dips, 10 french press panca
 - C2x3: 15 KB gamba piegata, 20 crunch, 15 RDL
 - C3x3: 3 burpees, 15 MCC
 
-**Allenamento 8 marzo 2024 (\- Self made)**
+**Allenamento 8 marzo 2024**
 Stretching parte superiore del corpo [https://www.youtube.com/watch?v=RDlnCDpPRKY](https://www.youtube.com/watch?v=RDlnCDpPRKY)
 
 - C1x3: 20 crunch, 20 bicycle crunch, 30” plank
@@ -231,7 +222,7 @@ Stretching parte superiore del corpo [https://www.youtube.com/watch?v=RDlnCDpPRK
 - C3x3: 20 hammer curl bottiglie, 10 slanci laterali sdraiato sul fianco con elastico
 - C4x2: 20 mountain climber
 
-**Allenamento 14 marzo 2024 (\- Self made)**
+**Allenamento 14 marzo 2024**
 
 - C1x2: 20 step up
 - C2x3: 15 push up, 20 crunch, 10 bar row
@@ -239,12 +230,12 @@ Stretching parte superiore del corpo [https://www.youtube.com/watch?v=RDlnCDpPRK
 - C4x3: 10 slanci laterali in piedi elastico, 10 abs sforbiciate, 10 push up diamond
 - C5x2: 20 mountain climber
 
-**Allenamento 17 marzo 2024 (\- Mini allenamento stretching)**
+**Allenamento 17 marzo 2024**
 
 - C1x3: 10 slanci laterali in quadrupedia elastico, 10 standing curls femorali, 20 rotazioni anca: [I 2 esercizi "miracolosi" per i DOLORI AL TROCANTERE (funzionano sempre\!)](https://www.youtube.com/watch?v=h3j_QDX9b_E&t=396s), 10 superman quadrupedia: [•Superman in quadrupedia• 🏃🏻](https://www.youtube.com/watch?v=KApq6FQE66U)
 - Stretching completo corpo 20 min [Stretching Total Body Completo: Esercizi di Stretching e Allungamento Muscolare](https://www.youtube.com/watch?v=uugqNw2ESzM)
 
-**Allenamento 21 marzo 2024 (\- Self made)**
+**Allenamento 21 marzo 2024**
 
 - C1x2: 30” skip lentissimo, 20 mountain climbers
 - C2x4: 10 push up, 10 bar row, 20 crunch
@@ -252,7 +243,7 @@ Stretching parte superiore del corpo [https://www.youtube.com/watch?v=RDlnCDpPRK
 - C4x3: 10 addominali ball, 10 slanci laterali in piedi elastico
 - C5x2: 30” skip lentissimo, 20 mountain climbers
 
-**Allenamento 26 marzo 2024 (\- Self made)**
+**Allenamento 26 marzo 2024**
 
 - Stretching total body [Stretching Total Body: Esercizi Per Migliorare Flessibilità ed Elasticità](https://www.youtube.com/watch?v=4jI-JrOqMX8&list=PL5AFJ3euuEcWV6yFnEphWWDyw43eS9iPG&index=8)
 - C1x3: 15 push up, 10 affondi in avanti, 20 crunch
@@ -714,17 +705,12 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C1x2: 5 burpees, 20 mountain climbers, 30” plank
 - C2x3: 12 push up, 20 squat, 20 dips
 - C3x3: 20 crunch, 20 bicycle crunch
-  Programmazione **SETTEMBRE-OTTOBRE** 06/09/2024 \- 16/10/2024 \+ 4 lezioni PT \= **13 allenamenti tot.**
-  [https://www.instagram.com/reel/DBo1MFLIoW3/?igsh=eWliY242NTF4a3Rq](https://www.instagram.com/reel/DBo1MFLIoW3/?igsh=eWliY242NTF4a3Rq) usa questi esercizi magari come riscaldamento prima di row/pull up\!
 
 **Allenamento 30 dicembre 2024**
 
 - C1x6: 10 push up (senza appoggio sulle ginocchia), 10 leg raise (1°, 3°, 5° set) / 10 sit up (2°, 4°, 6° set)
 - C2x5: (**1’ rest**): 25 squat, 20 MCC
 - C3x2: 50 GB elastico, 15 slanci laterali quadrupedia elastico
-  Scrivimi come va\!
-
-## PROGRAMMAZIONE 2025
 
 **Allenamento 3 gennaio 2025**
 

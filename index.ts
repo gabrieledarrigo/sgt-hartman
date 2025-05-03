@@ -43,56 +43,44 @@ async function generateTraining(exercises: Exercise[]): Promise<string> {
           ${JSON.stringify(exercises)}
 
           ALLENAMENTI RECENTI:
-
-          \`\`\`md
           **Allenamento 4 aprile 2025**
-          ### Parte Principale
           - C1x3: 20 affondi laterali alternati, max pull up con mano dx davanti (poi sx) negativa lenta
           - C2x3: 10 diamond push up, 10 leg raise, 20 crunch laterali
           - C3x4: 20 squat, 10 bar row, 20 V crunch
 
           **Allenamento 14 aprile 2025**
-          ### Riscaldamento
           - [10 Minuti di Riscaldamento Total Body o Mini Allenamento Per Principianti](https://www.youtube.com/watch?v=Uq86HTbUE8g&t=230s)
-
-          ### Parte Principale
           - C1x4: 10 push up, 20 squat, 20 crunch, 10 dips
           - C2x3: 20 calf raise, 15 kick back gamba piegata, 10 affondi per gamba
           - C3x3: 20 bicycle crunch, 30” plank, 20 mountain climber
 
           **Allenamento 16 aprile 2025**
-          ### Riscaldamento
           - [Esercizi Di Riscaldamento Total Body Senza Salti (7 Minuti)](https://www.youtube.com/watch?v=xWPkMyyZDzM)
-
-          ### Parte Principale
           - C1x3: 20 mountain climbers, 30 bicycle crunch, 10 slanci laterali in quadrupedia
           - C2x3: 20 glute bridge, 20 squat molleggiati, 20 alzate laterali
           - C3x3: 12 push up, 15 dips
           - C4x2: 10 french press, 10 arnold press, 20 curl biceps
-          \`\`\`
 
           Crea un allenamento completo con riscaldamento, parte principale e stretching finale. 
           Indica serie, ripetizioni e tempi di recupero per ogni esercizio usando il seguente formato Markdown:
 
           **Allenamento [data in in italiano in formato EEEE dd LLLL yyyy]**
-          ### Riscaldamento
-          - [Dettaglio riscaldamento]
+          - [Riscaldamento] (opzionale) (link a un video tutorial, opzionale)
 
-          ### Parte Principale
-          **C1x[N]**: [recupero: eventuale tempo di recupero]
-          - [Esercizio 1]: [ripetizioni]
-          - [Esercizio 2]: [ripetizioni]
-          - [Esercizio N]: [ripetizioni]
+          **C1x[N]**: [recupero:  opzionale: tempo di recupero in secondi]
+          - [Esercizio 1]: [ripetizioni o tempo in secondi]
+          - [Esercizio 2]: [ripetizioni o tempo in secondi]
+          - [Esercizio N]: [ripetizioni o tempo in secondi]
 
-          **C2x[N]**: [recupero: eventuale tempo di recupero]
-          - [Esercizio 1]: [ripetizioni]
-          - [Esercizio 2]: [ripetizioni]
-          - [Esercizio N]: [ripetizioni]
+          **C2x[N]**: [recupero, opzionale: tempo di recupero in secondi]
+          - [Esercizio 1]: [ripetizioni o tempo in secondi]
+          - [Esercizio 2]: [ripetizioni o tempo in secondi]
+          - [Esercizio N]: [ripetizioni o tempo in secondi]
 
-          **CCx[N]**: [recupero: eventuale tempo di recupero]
-          - [Esercizio N]: [ripetizioni]
+          **CCx[N]**: [recupero: opzionale: tempo di recupero in secondi]
+          - [Esercizio N]: [ripetizioni o tempo in secondi]
 
-          ### Stretching (5 minuti)
+          ### Stretching (opzionale)
           - [Dettaglio stretching]
 
           Non aggiungere note o spiegazioni aggiuntive.
