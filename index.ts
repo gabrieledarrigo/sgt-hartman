@@ -15,10 +15,16 @@ type Equipment = {
   type: string;
 };
 
+type Training = {
+  id: number;
+  training: string;
+  date: Date;
+}
+
 const GROQ_API_KEY = Bun.env.GROQ_API_KEY;
 
 const groq = new Groq({ apiKey: GROQ_API_KEY });
-const db = new Database('data/exercises.sqlite', {
+const db = new Database('data/sgt.hartman.sqlite', {
   create: true,
   strict: true,
 });
@@ -26,6 +32,7 @@ const db = new Database('data/exercises.sqlite', {
 async function generateTraining(
   exercises: Exercise[],
   equipments: string[],
+  lastTrainings: Training[],
 ): Promise<string> {
   const completion = await groq.chat.completions.create({
     messages: [
@@ -50,26 +57,10 @@ async function generateTraining(
           ${JSON.stringify(exercises)}
 
           ATTREZZATURA:
-          ${JSON.stringify(equipments)}
+          ${equipments.join(',')}
 
           ALLENAMENTI RECENTI:
-          **Allenamento 4 aprile 2025**
-          - C1x3: 20 affondi laterali alternati, max pull up con mano dx davanti (poi sx) negativa lenta
-          - C2x3: 10 diamond push up, 10 leg raise, 20 crunch laterali
-          - C3x4: 20 squat, 10 bar row, 20 V crunch
-
-          **Allenamento 14 aprile 2025**
-          - [10 Minuti di Riscaldamento Total Body o Mini Allenamento Per Principianti](https://www.youtube.com/watch?v=Uq86HTbUE8g&t=230s)
-          - C1x4: 10 push up, 20 squat, 20 crunch, 10 dips
-          - C2x3: 20 calf raise, 15 kick back gamba piegata, 10 affondi per gamba
-          - C3x3: 20 bicycle crunch, 30” plank, 20 mountain climber
-
-          **Allenamento 16 aprile 2025**
-          - [Esercizi Di Riscaldamento Total Body Senza Salti (7 Minuti)](https://www.youtube.com/watch?v=xWPkMyyZDzM)
-          - C1x3: 20 mountain climbers, 30 bicycle crunch, 10 slanci laterali in quadrupedia
-          - C2x3: 20 glute bridge, 20 squat molleggiati, 20 alzate laterali
-          - C3x3: 12 push up, 15 dips
-          - C4x2: 10 french press, 10 arnold press, 20 curl biceps
+          ${lastTrainings.map(training => training.training).join('\n\n')}
 
           Crea un allenamento completo con riscaldamento, parte principale e stretching finale. 
           Indica serie, ripetizioni e tempi di recupero per ogni esercizio usando il seguente formato Markdown:
@@ -129,12 +120,28 @@ function getEquipments(): string[] {
   return query.all({}).map((equipment) => equipment.type);
 }
 
+function getLastTrainings(): Training[] {
+  const query = db.query<Training, {}>(`
+    SELECT *
+    FROM trainings
+    ORDER BY date DESC
+    LIMIT 3
+  `);
+
+  return query.all({});
+}
+
 async function main() {
   const exercises = getExercises();
   const equipments = getEquipments();
-  const training = await generateTraining(exercises, equipments);
+  const lastTrainings = getLastTrainings();
+  const training = await generateTraining(exercises, equipments, lastTrainings);
 
   console.log(training);
 }
 
-await main().catch((err) => console.error(err));
+await main()
+  .catch((err) => console.error(err))
+  .finally(() => {
+    db.close(true)
+  });
