@@ -21,7 +21,10 @@ type Training = {
   date: Date;
 }
 
+type TrainingLevel = 'facile' | 'intermedio' | 'difficile';
+
 const GROQ_API_KEY = Bun.env.GROQ_API_KEY;
+const LLM_MODEL = Bun.env.LLM_MODEL;
 
 const groq = new Groq({ apiKey: GROQ_API_KEY });
 const db = new Database('data/sgt.hartman.sqlite', {
@@ -33,16 +36,24 @@ async function generateTraining(
   exercises: Exercise[],
   equipments: string[],
   lastTrainings: Training[],
+  trainingLevel: TrainingLevel = 'intermedio',
+  desiredDuration: number = 60,
+  notes?: string,
 ): Promise<string> {
   const completion = await groq.chat.completions.create({
     messages: [
       {
         role: 'system',
         content: `
-          Sei un personal trainer esperto e capace, specializzato nell'allenamento a corpo libero.
-          Il tuo compito è generare allenamenti partendo un database di esercizi in formato JSON che ti verrà allegato nel corpo di ogni richiesta.
-          Oltre al database, ti verrò fornito un elenco degli ultimi 2 o 3 allenamenti recenti così che tu possa generare un allenamento equilibrato.
-          `,
+          Sei un personal trainer esperto, specializzato nell'allenamento a corpo libero.
+          Il tuo compito è generare un allenamento a corpo libero partendo da un database di esercizi in formato JSON che ti verrà allegato nel corpo di ogni richiesta.
+          Oltre al database di esercizi, ti verranno forniti:
+          
+          - Il livello di difficoltà dell'allenamento e la durata desiderata in minuti
+          - Un elenco degli ultimi 2 o 3 allenamenti recenti così l'allenamento generato tenga conto del pregresso dell'utente che alleni.
+          - L'attrezzatura che puoi utilizzare per creare l'allenamento
+          - Alcune note fornite dall'utente con richieste specifiche riguardo all'allenamento
+        `,
       },
       {
         role: 'user',
@@ -50,8 +61,9 @@ async function generateTraining(
           Genera un allenamento per oggi: ${format(new Date(), 'EEEE dd LLLL yyyy', { locale: it })} basato sui miei dati storici.
 
           DATI UTENTE:
-          - Livello: intermedio
-          - Durata desiderata: 60 minuti
+          - Livello: ${trainingLevel}
+          - Durata desiderata: ${desiredDuration} minuti
+          - Note aggiuntive: ${notes ? notes : 'Nessuna nota fornita dall utente.'}
 
           DATABASE ESERCIZI:
           ${JSON.stringify(exercises)}
@@ -62,10 +74,18 @@ async function generateTraining(
           ALLENAMENTI RECENTI:
           ${lastTrainings.map(training => training.training).join('\n\n')}
 
-          Crea un allenamento completo con riscaldamento, parte principale e stretching finale. 
-          Indica serie, ripetizioni e tempi di recupero per ogni esercizio usando il seguente formato Markdown:
+          Crea un allenamento completo composto da:
+          
+          - Una fase di riscaldamento, opzionale
+          - Una parte principale composta da una serie di circuiti 
+          - Una fase di stretching finale, opzionale
+          - Una breve descrizione dell'allenamento composta al massimo da una frase.
 
-          **Allenamento [data in in italiano in formato EEEE dd LLLL yyyy]**
+          Per i circuiti indica serie, ripetizioni (o tempo in secondi per esercizi che non prevedono ripetizioni, come i Jumping Jack), e tempi di recupero per ogni esercizio.
+          Se lo ritieni opportuno, ometti le parti indicate come opzionali.
+          L'allenamento deve rispettare il seguente formato Markdown:
+
+          **Allenamento [data in in italiano in formato EEEE dd LLLL yyyy]** (durata in minuti stimata)
           - [Riscaldamento] (opzionale) (link a un video tutorial, opzionale)
 
           **C1x[N]**: [recupero:  opzionale: tempo di recupero in secondi]
@@ -84,11 +104,14 @@ async function generateTraining(
           ### Stretching (opzionale)
           - [Dettaglio stretching]
 
+          ### Descrizione (opzionale)
+          - [Dettaglio descrizione]
+
           Non aggiungere note o spiegazioni aggiuntive.
         `,
       },
     ],
-    model: 'llama-3.3-70b-versatile',
+    model: LLM_MODEL,
   });
 
   return (
@@ -120,21 +143,21 @@ function getEquipments(): string[] {
   return query.all({}).map((equipment) => equipment.type);
 }
 
-function getLastTrainings(): Training[] {
-  const query = db.query<Training, {}>(`
+function getLastTrainings(numberOfTraining: number = 3): Training[] {
+  const query = db.query<Training, number>(`
     SELECT *
     FROM trainings
     ORDER BY date DESC
-    LIMIT 3
+    LIMIT :numberOfTraining;
   `);
 
-  return query.all({});
+  return query.all(numberOfTraining);
 }
 
 async function main() {
   const exercises = getExercises();
   const equipments = getEquipments();
-  const lastTrainings = getLastTrainings();
+  const lastTrainings = getLastTrainings(5);
   const training = await generateTraining(exercises, equipments, lastTrainings);
 
   console.log(training);

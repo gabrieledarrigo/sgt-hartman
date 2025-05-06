@@ -855,3 +855,14 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - [20 Minuti Allenamento HIIT BRUCIA GRASSI (Senza Attrezzi) - MOLTO INTENSO 🚨](https://www.youtube.com/watch?v=dW39V3xoE74)
 - C1x4: 15 push up, 10 dips panca
 - Stretching
+
+**Allenamento venerdì 02 maggio 2025**
+
+- Riscaldamento: [Esercizi Di Riscaldamento Total Body Senza Salti (7 Minuti)](https://www.youtube.com/watch?v=xWPkMyyZDzM)
+- [20 Minuti Allenamento HIIT BRUCIA GRASSI (Senza Attrezzi) - MOLTO INTENSO 🚨](https://www.youtube.com/watch?v=dW39V3xoE74)
+- Stretching
+
+**Allenamento lunedì 05 maggio 2025**
+
+- Riscaldamento: [Esercizi Di Riscaldamento Total Body Senza Salti (7 Minuti)](https://www.youtube.com/watch?v=xWPkMyyZDzM)
+- [ALLENAMENTO FULL BODY SENZA ATTREZZI IN 10 MINUTI](https://www.youtube.com/watch?v=CjpsIOyLwKA) x3
