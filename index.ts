@@ -2,26 +2,7 @@ import Groq from 'groq-sdk';
 import { format } from 'date-fns';
 import { it } from 'date-fns/locale';
 import { Database } from 'bun:sqlite';
-
-type Exercise = {
-  id: number;
-  name: string;
-  categories: string;
-  variations: string;
-  equipments: string;
-};
-
-type Equipment = {
-  type: string;
-};
-
-type Training = {
-  id: number;
-  training: string;
-  date: Date;
-}
-
-type TrainingLevel = 'facile' | 'intermedio' | 'difficile';
+import type { Exercise, Training, TrainingLevel, Equipment } from './src/types';
 
 const GROQ_API_KEY = Bun.env.GROQ_API_KEY;
 const LLM_MODEL = Bun.env.LLM_MODEL;
