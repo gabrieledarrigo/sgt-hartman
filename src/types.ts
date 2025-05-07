@@ -12,7 +12,7 @@ export type Equipment = {
 };
 
 export type Training = {
-  id: number;
+  id?: number;
   training: string;
   date: Date;
 };
