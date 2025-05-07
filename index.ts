@@ -30,10 +30,10 @@ async function generateTraining(
           Il tuo compito è generare un allenamento a corpo libero partendo da un database di esercizi in formato JSON che ti verrà allegato nel corpo di ogni richiesta.
           Oltre al database di esercizi, ti verranno forniti:
           
-          - Il livello di difficoltà dell'allenamento e la durata desiderata in minuti
-          - Un elenco degli ultimi 2 o 3 allenamenti recenti così l'allenamento generato tenga conto del pregresso dell'utente che alleni.
-          - L'attrezzatura che puoi utilizzare per creare l'allenamento
-          - Alcune note fornite dall'utente con richieste specifiche riguardo all'allenamento
+          - Il livello di difficoltà dell'allenamento e la durata desiderata in minuti.
+          - Alcuni allenamenti recenti, così che l'allenamento generato tenga conto del pregresso dell'utente che alleni.
+          - L'attrezzatura che puoi utilizzare per creare l'allenamento.
+          - Opzionalmente, alcune note scritte dall'utente con richieste specifiche o preferenze riguardo all'allenamento.
         `,
       },
       {
@@ -44,7 +44,7 @@ async function generateTraining(
           DATI UTENTE:
           - Livello: ${trainingLevel}
           - Durata desiderata: ${desiredDuration} minuti
-          - Note aggiuntive: ${notes ? notes : 'Nessuna nota fornita dall utente.'}
+          - Note aggiuntive o preferenze: ${notes ? notes : 'Nessuna nota fornita dall utente.'}
 
           DATABASE ESERCIZI:
           ${JSON.stringify(exercises)}
@@ -56,34 +56,22 @@ async function generateTraining(
           ${lastTrainings.map(training => training.training).join('\n\n')}
 
           Crea un allenamento completo composto da:
-          
+
           - Una fase di riscaldamento, opzionale
           - Una parte principale composta da una serie di circuiti 
           - Una fase di stretching finale, opzionale
-          - Una breve descrizione dell'allenamento composta al massimo da una frase.
+          - Una breve descrizione dell'allenamento composta al massimo da una frase, opzionale.
 
-          Per i circuiti indica serie, ripetizioni (o tempo in secondi per esercizi che non prevedono ripetizioni, come i Jumping Jack), e tempi di recupero per ogni esercizio.
-          Se lo ritieni opportuno, ometti le parti indicate come opzionali.
+          Per i circuiti indica serie, ripetizioni (o tempo di esecuzione in secondi se l'esercizio non prevede ripetizioni), ed eventuali tempi di recupero per ogni esercizio.
+          Ometti le parti indicate come opzionali se non sono funzionali all'allenamento.
           L'allenamento deve rispettare il seguente formato Markdown:
 
-          **Allenamento [data in in italiano in formato EEEE dd LLLL yyyy]** (durata in minuti stimata)
+         **Allenamento [data in in italiano in formato EEEE dd LLLL yyyy]**
           - [Riscaldamento] (opzionale) (link a un video tutorial, opzionale)
-
-          **C1x[N]**: [recupero:  opzionale: tempo di recupero in secondi]
-          - [Esercizio 1]: [ripetizioni o tempo in secondi]
-          - [Esercizio 2]: [ripetizioni o tempo in secondi]
-          - [Esercizio N]: [ripetizioni o tempo in secondi]
-
-          **C2x[N]**: [recupero, opzionale: tempo di recupero in secondi]
-          - [Esercizio 1]: [ripetizioni o tempo in secondi]
-          - [Esercizio 2]: [ripetizioni o tempo in secondi]
-          - [Esercizio N]: [ripetizioni o tempo in secondi]
-
-          **CCx[N]**: [recupero: opzionale: tempo di recupero in secondi]
-          - [Esercizio N]: [ripetizioni o tempo in secondi]
-
-          ### Stretching (opzionale)
-          - [Dettaglio stretching]
+          - **C1x[N]**: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
+          - **C2x[N]**: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
+          - **CNx[N]**: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
+          - [Stretching] (opzionale)
 
           ### Descrizione (opzionale)
           - [Dettaglio descrizione]

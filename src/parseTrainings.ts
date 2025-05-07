@@ -28,7 +28,7 @@ function parseDate(dateString: string): Date {
   return new Date();
 }
 
-async function parseTrainings(): Promise<Training[]> {
+export async function parseTrainings(): Promise<Training[]> {
   const content = await readFile(TRAINING_FILE_PATH, 'utf-8');
   const trainings: Training[] = [];
 
@@ -39,7 +39,6 @@ async function parseTrainings(): Promise<Training[]> {
     const training = match[2].trim();
     const titleMatch = title.match(TITLE_REGEX);
 
-    // console.log(match, title, titleMatch);
     if (!titleMatch) {
       throw new Error(`Invalid title: ${title}. Specify a title in the format: **Allenamento **EEEE dd LLLL yyyy`);
     }
@@ -55,12 +54,3 @@ async function parseTrainings(): Promise<Training[]> {
 
   return trainings;
 }
-
-async function main(): Promise<void> {
-  const trainings = await parseTrainings();
-
-  console.log(trainings);
-}
-
-await main()
-  .catch((err) => console.error(err))

@@ -1,6 +1,9 @@
 import { Database } from 'bun:sqlite';
 import { join } from 'node:path';
 import { readFile } from 'node:fs/promises';
+import type { Training } from "./types";
+import { parse } from 'date-fns';
+import { it } from 'date-fns/locale';
 
 type Exercise = {
   name: string;
@@ -25,6 +28,7 @@ type Exercises = {
 };
 
 const EXERCISES_FILE_PATH = join(__dirname, '../data/exercises.json');
+const TRAINING_FILE_PATH = join(__dirname, '../data/trainings.md');
 
 const db = new Database('data/sgt.hartman.sqlite', {
   create: true,
@@ -35,6 +39,56 @@ async function getExercises(): Promise<Exercises> {
   const exercises = await readFile(EXERCISES_FILE_PATH, 'utf8');
 
   return JSON.parse(exercises);
+}
+
+function parseDate(dateString: string): Date {
+  const withDay = parse(dateString, 'EEEE dd LLLL yyyy', new Date(), {
+    locale: it
+  });
+
+  if (!isNaN(withDay.getTime())) {
+    return withDay;
+  }
+
+  const withoutDay = parse(dateString, 'dd LLLL yyyy', new Date(), {
+    locale: it
+  });
+
+  if (!isNaN(withoutDay.getTime())) {
+    return withoutDay;
+  }
+
+  return new Date();
+}
+
+export async function getTrainings(): Promise<Training[]> {
+  const TRANING_REGEX = /\*\*(Allenamento [^*]+)\*\*\s*([\s\S]*?)(?=\*\*Allenamento|\s*$)/g;
+  const TITLE_REGEX = /(Allenamento)\s(.*)/;
+
+  const content = await readFile(TRAINING_FILE_PATH, 'utf-8');
+  const trainings: Training[] = [];
+
+  let match: RegExpExecArray | null = null;
+
+  while ((match = TRANING_REGEX.exec(content)) !== null) {
+    const title = match[1].trim();
+    const training = match[2].trim();
+    const titleMatch = title.match(TITLE_REGEX);
+
+    if (!titleMatch) {
+      throw new Error(`Invalid title: ${title}. Specify a title in the format: **Allenamento **EEEE dd LLLL yyyy`);
+    }
+
+    const dateString = titleMatch[2];
+    const date = parseDate(dateString);
+
+    trainings.push({
+      training: `${title}\n${training}`,
+      date,
+    })
+  }
+
+  return trainings;
 }
 
 function createTables(): void {
@@ -115,8 +169,23 @@ function storeEquipments(type: string): void {
   });
 }
 
+function storeTraining(training: Training): void {
+  const insert = db.prepare(
+    `
+      INSERT INTO trainings (training, date)
+      VALUES (:training, :date);
+    `,
+  );
+
+  insert.run({
+    training: training.training,
+    date: training.date.toISOString(),
+  });
+}
+
 async function initDb(): Promise<void> {
   const exercises = await getExercises();
+  const trainings = await getTrainings();
   createTables();
 
   db.transaction((exercises: Exercises) => {
@@ -130,6 +199,10 @@ async function initDb(): Promise<void> {
 
     for (const equipment of exercises.equipments) {
       storeEquipments(equipment);
+    }
+
+    for (const training of trainings) {
+      storeTraining(training);
     }
   })(exercises);
 }

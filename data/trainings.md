@@ -186,7 +186,7 @@ Seguiamo le andature di questo video:
 
 **Allenamento 24 febbraio 2024** (30’ circa)
 
-- [Esercizi Addominali A Casa: Allenamento Completo Per Addominali Tonici](https://www.youtube.com/watch?v=-scf2sMa9gI)a
+- [Esercizi Addominali A Casa: Allenamento Completo Per Addominali Tonici](https://www.youtube.com/watch?v=-scf2sMa9gI)
 - Stretching abs
 - C1x3: (1’ rest): 10 goblet squat con una cassa d’acqua
 - C2x3: (1’ rest): 15 push up
@@ -254,17 +254,11 @@ Stretching parte superiore del corpo [https://www.youtube.com/watch?v=RDlnCDpPRK
 **Allenamento 4 aprile 2024**
 Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in casa)
 
-- C1x3: 20 GB \+ 30” iso, 10 GB single leg \+ 15” iso per gamba, 20 bicycle crunch
+- C1x3: 20 glute bridge \+ 30” isometria, 10 glute bridgeGB single leg \+ 15” isometria per gamba, 20 bicycle crunch
 - C2x3: 15 push up, 1’ plank sui gomiti (sedere basso\!)
-- C3x3: 8 dips parallele (riduci il ROM se faticoso), 10 superman \+ 30” iso, 10 distensioni braccia in superman position, leg extension bw [WOW\! 👍 LEG EXTENSION A CORPO LIBERO E SENZA ATTREZZI](https://www.youtube.com/watch?v=1p6HgBB-7-I)
-- C4x4: (facoltativo): 15 KB gamba tesa bw \+ 30” iso
+- C3x3: 8 dips parallele (riduci il ROM se faticoso), 10 superman \+ 30” isometria, 10 distensioni braccia in superman position, leg extension bw [WOW\! 👍 LEG EXTENSION A CORPO LIBERO E SENZA ATTREZZI](https://www.youtube.com/watch?v=1p6HgBB-7-I)
+- C4x4: (facoltativo): 15 kick back gamba tesa bw \+ 30” isometria
 - Stretching
-  **Legenda:**
-  GB \= glute bridge
-  iso \= isometria
-  KB \= kick back
-  ROM \= range of motion/movement
-  bw \= body weight
 
 **Allenamento 7 aprile 2024**
 
