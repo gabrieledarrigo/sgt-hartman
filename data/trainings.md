@@ -1,6 +1,6 @@
 # Allenamenti
 
-**Allenamento 9 ottobre 2023**
+**Allenamento 09 ottobre 2023**
 
 - 1 giro di corsa
 - C1x3: 10 sit up, 10 push up
@@ -87,7 +87,7 @@ Seguiamo le andature di questo video:
 - C2x3: (1’ rest): 8 push up, 20 crunch talloni, 8 push up
 - C3x4: 10 bar row
 
-**Allenamento 1 gennaio 2024**
+**Allenamento 01 gennaio 2024**
 
 - Riscaldamento: segui questo video [https://www.youtube.com/watch?v=RDlnCDpPRKY](https://www.youtube.com/watch?v=RDlnCDpPRKY)
 - C1x5: scaldati sulla sbarra poi trazioni x max con saltino e negativa lenta (scegli tu se presa prona o supina e mantienila per tutti e 5 i set)
@@ -96,7 +96,7 @@ Seguiamo le andature di questo video:
 - C4x3: 10 alzate a 360° ([https://www.youtube.com/watch?v=kmkUVxJqnX4](https://www.youtube.com/watch?v=kmkUVxJqnX4)), 10 alzate laterali, 10 french press ([https://www.youtube.com/watch?v=rcUE0yE7mdM](https://www.youtube.com/watch?v=rcUE0yE7mdM)). Come peso usa 2 bottiglie da 2l ciascuna.
 - Stretching
 
-**Allenamento 5 gennaio 2024**
+**Allenamento 05 gennaio 2024**
 
 - Riscaldamento: segui questo video dal minuto 5 al minuto 15 [https://www.youtube.com/watch?v=v04PCM7Csoc](https://www.youtube.com/watch?v=v04PCM7Csoc)
 - C1x3: (90’’ rest): 15 leg raise, 10 knees to chest, 20 bicycle crunch, 30’’ plank. Cerca di non fare pause intermedie troppo lunghe.
@@ -105,7 +105,7 @@ Seguiamo le andature di questo video:
 - C3x4: 5 squat, 10 affondi (scegli tu se avanti o indietro)
 - Stretching: segui questo video [https://www.youtube.com/watch?v=F6xF5g0XQGo](https://www.youtube.com/watch?v=F6xF5g0XQGo)
 
-**Allenamento 7 gennaio 2024**
+**Allenamento 07 gennaio 2024**
 
 - Se hai voglia di fare un terzo allenamento prendi un vecchio circuito che ti ispira e seguilo. Salta eventualmente le parti del circuito che non ti senti di fare.
 
@@ -146,13 +146,13 @@ Seguiamo le andature di questo video:
 - C3x2: /3: 30 twist, 20 crunch
 - Stretching
 
-**Allenamento 5 febbraio 2024**
+**Allenamento 05 febbraio 2024**
 
 - C1x4: 10 glute bridge single leg, 15 glute bridge, 15 croci in glute bridge bottiglie [Croci con manubri in glute bridge ZF training](https://www.youtube.com/watch?v=tLj74_p5Nj8)
 - C2x3: 15 push up, 10 goblet squat [Goblet Squat: esercizio per Gambe e Glutei](https://www.youtube.com/watch?v=9exgpMMPlvU)
 - C3x2: 25 crunch, 20 dips panca, 20 alzate laterali bottiglie, 20 hammer curl bottiglie[Dumbbell Hammer Curls Tutorial | CORRECT TECHNIQUE (\!)](https://www.youtube.com/watch?v=OPqe0kCxmR8)
 
-**Allenamento 9 febbraio 2024**
+**Allenamento 09 febbraio 2024**
 
 - C1x2: 10 sit up, 10 crunch, 10 leg raise, 20 twist
 - C2x3: (1’ rest): 10 goblet squat con una cassa d’acqua
@@ -200,7 +200,7 @@ Seguiamo le andature di questo video:
 - C4x3: reverse hyperextension (bracciolo divano \+ cuscini sotto il bacino se basso). Scegli se con elastico gif 1 o senza elastico gif 2
 - Stretching
 
-**Allenamento 1 marzo 2024**
+**Allenamento 01 marzo 2024**
 
 - C1x3: 10 good morning \+ 10 good morning pesi, 10 alzate laterali, 10 RDL single leg, 10 dips
 - C2x3: 15 push up, 15 glute bridge elastico, 10 croci in glute bridge position, 20 squat
@@ -208,13 +208,13 @@ Seguiamo le andature di questo video:
   N.B. Se vuoi aumentare il volume di allenamento aggiungi un giro ad ogni circuito, per cui fai 4 set anziché 3\.
 - Stretching
 
-**Allenamento 5 marzo 2024**
+**Allenamento 05 marzo 2024**
 
 - C1x3: 15 push up, 15 dips, 10 french press panca
 - C2x3: 15 KB gamba piegata, 20 crunch, 15 RDL
 - C3x3: 3 burpees, 15 MCC
 
-**Allenamento 8 marzo 2024**
+**Allenamento 08 marzo 2024**
 Stretching parte superiore del corpo [https://www.youtube.com/watch?v=RDlnCDpPRKY](https://www.youtube.com/watch?v=RDlnCDpPRKY)
 
 - C1x3: 20 crunch, 20 bicycle crunch, 30” plank
@@ -251,7 +251,7 @@ Stretching parte superiore del corpo [https://www.youtube.com/watch?v=RDlnCDpPRK
 - C3x3: 15 abs sforbiciate, 20 calf raise, 15 arnold press bottiglie
 - C4x2: 20 curls bicipiti bottiglie
 
-**Allenamento 4 aprile 2024**
+**Allenamento 04 aprile 2024**
 Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in casa)
 
 - C1x3: 20 glute bridge \+ 30” isometria, 10 glute bridgeGB single leg \+ 15” isometria per gamba, 20 bicycle crunch
@@ -260,7 +260,7 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C4x4: (facoltativo): 15 kick back gamba tesa bw \+ 30” isometria
 - Stretching
 
-**Allenamento 7 aprile 2024**
+**Allenamento 07 aprile 2024**
 
 - Esercizi equilibrio: [8 Esercizi Per l'Equilibrio: Livello Base](https://www.youtube.com/watch?v=0tW04t6NF5c) (lui ti starà simpatico\!) se easy passa al video successivo, altrimenti fermati qui [10 Esercizi di Equilibrio Avanzati](https://www.youtube.com/watch?v=jtU46prBuOM). Prendi nota di punti di forza e debolezza.
 - C1xN: 20 push up, 20 air squat, 20 crunch doppio molleggio, 10 bar row (se ti alleni al parco, altrimenti saltali pure)
@@ -288,25 +288,25 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C4x3: 10 KB gamba tesa elastico \+ 15” iso
 - Stretching
 
-**Allenamento 2 maggio 2024**
+**Allenamento 02 maggio 2024**
 
 - [10 Min. Mobilità delle Anche // Hips Mobility Routine](https://www.youtube.com/watch?v=Wep_Wryds68)
 
-**Allenamento 3 maggio 2024**
+**Allenamento 03 maggio 2024**
 
 - Riscaldamento: [10 Minuti di Riscaldamento Total Body o Mini Allenamento Per Principianti](https://www.youtube.com/watch?v=Uq86HTbUE8g&t=230s)
 - C1x4: 10 affondi, 15 alzate laterali
 - C2x4: 10 yoga push up [Yoga Push-ups](https://www.youtube.com/watch?v=zxNSXfHnNyE&t=22s), 20 sforbiciate
   \*Se ne hai ancora aggiungi 3/4x10 bar row
 
-**Allenamento 5 maggio 2024**
+**Allenamento 05 maggio 2024**
 
 - C1x3: 15 GB spalle appoggiate cassa d’acqua [Hip Thrust](https://www.youtube.com/watch?v=3ENrRyaAFEQ&t=3s), 15 crunch, 15 reverse crunch [Reverse Crunch](https://www.youtube.com/watch?v=gAyTBB4lm3I)
 - C2x2: (pesi): 25 good morning, 25 RDL, 20 push up al muro [6: Push-ups against a wall](https://www.youtube.com/watch?v=5NPvv40gd3Q) \* Scegli tu il numero di serie di questi due circuiti in base a come ti senti
 - Stretching long 30’[Stretching: Esercizi Di Allungamento Muscolare Per Tutto Il Corpo](https://www.youtube.com/watch?v=L69-s_xj__U)or
 - Stretching short 10’ [Stretching Completo: Esercizi di Stretching Per Tutto Il Corpo](https://www.youtube.com/watch?v=XjsbRUcFLZ0)
 
-**Allenamento 8 maggio 2024**
+**Allenamento 08 maggio 2024**
 
 - Riscaldamento: [Esercizi Di Riscaldamento Total Body Senza Salti (7 Minuti)](https://www.youtube.com/watch?v=xWPkMyyZDzM)
 - C1x3: 10 crunch, 5 push up su panca, 5 affondi per gamba
@@ -335,7 +335,7 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C3x3: 10 step up, 5 affondi per gamba
 - C4x2: 10 jumping jack, 5 burpees, 20 mountain climbers
 
-**Allenamento 6 giugno 2024**
+**Allenamento 06 giugno 2024**
 
 - C1x4: (1’ rest): 15 air squat
 - C2x4: (1’ rest): 10 affondi per gamba
@@ -343,7 +343,7 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C4x4: (1’ rest): 10 bar row
 - C5x3: (1’ rest): 20 push up
 
-**Allenamento 8 giugno 2024**
+**Allenamento 08 giugno 2024**
 
 - C1x4: (30” rest): 30” push up, 30” squat veloci, 30” bear walk, 30” plank
   \*10’ di lavoro totali per il primo circuito, stai nei tempi, non ti fermare MAI.
@@ -351,7 +351,7 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C3x3: french press manubri, alzate a 360°, curl biceps
 - Stretching
 
-**Allenamento jolly 20’**
+**Allenamento 09 giugno 2024**
 
 - [Esercizi Da Fare A Casa Per Uomo](https://www.youtube.com/watch?v=JKWWXPS8Ny4)
 
@@ -384,21 +384,21 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C3x5 EMOM 5’: 10 plank commando (tieni il sedere basso), GB butterfly piedi su rialzo
 - C4x5 EMOM 5’: 20 scissors abs clap, GB butterfly piedi su rialzo
 
-**Allenamento 1 luglio 2024**
+**Allenamento 01 luglio 2024**
 
 - [SPALLE, PETTO e TRICIPITI Senza Attrezzi - Allenamento a Corpo Libero | Emanuele Mauti](https://www.youtube.com/watch?v=scPmBGO2lSs)Allenamento video trascritto:
   40” ON 20” OFF (12’ totali di lavoro): knees push up, downdog plank, dips, release push up, LYT, pike push up, incline push up, rotation plank, knee triceps extension, side push up, push back push up, one arm side push up.
 - 4x20 air squat
 - Stretching
 
-**Allenamento 4 luglio 2024**
+**Allenamento 04 luglio 2024**
 
 - C1x3: abs (1’ rest): 10 crunch, 10 bicycle, 10 knee to chest, 10 leg raise
 - C2x2: (1’30” rest): 10 squat elastico e pesi, 10 squat elastico, 10 squat jump elastico apro-chiudo
 - C3x5: bar row 11-10-9-8-7 (parti da 11 rep e alla quinta serie arriverai a 7 rep)
 - C4x2: 15 french press, 10 alzate 360°
 
-**Allenamento 6 luglio 2024**
+**Allenamento 06 luglio 2024**
 
 - La tecnica di Emanuele nell’esecuzione degli esercizi non è il massimo ma questo workout può essere un buon allenamento cardio (HIIT \= High Intensity Interval Training). Come al solito, stoppa il video se non ce la fai più, regolati tu. [20 Minuti Allenamento HIIT BRUCIA GRASSI (Senza Attrezzi) - MOLTO INTENSO 🚨](https://www.youtube.com/watch?v=dW39V3xoE74)
 - C1x4: 15 push up, 10 dips panca
@@ -453,20 +453,20 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - [20 Minuti Allenamento HIIT BRUCIA GRASSI (Senza Attrezzi) - MOLTO INTENSO 🚨](https://www.youtube.com/watch?v=dW39V3xoE74)
 - C1x4: 15 squat, 10 dips panca
 
-**Allenamento 3 agosto 2024**
+**Allenamento 03 agosto 2024**
 
 - C1x2: 45” jumping jack, 30” step up per gamba, 10 push up
 - C2x3: 10 bar row, 10 addominali alle parallele, 45” plank
 - C3x3: 10 air squat, 10 affondi per gamba, 20 calf raise
 - C3x4: 20 crunch, 7 push up
 
-**Allenamento 6 agosto 2024**
+**Allenamento 06 agosto 2024**
 
 - C1x3: 10 push up, 10 dips panca, 20 crunch, 45” plank
 - C2x3: 15 squat, 20 calf raise, 20 glute bridge
 - C3x3: 30 twist, 20 crunch
 
-**Allenamento 8 agosto 2024**
+**Allenamento 08 agosto 2024**
 
 - C1x3: 10 push up, 10 plank commando, 20 crunch, 7 yoga push up
 - C2x3: 15 squat, 10 kick back, 10 slanci laterali sul fianco
@@ -512,7 +512,7 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C3x3: 20 crunch, 15 glute bridge, 10 knee to chest
 - C4x2: 20 mountain climbers, 30” plank
 
-**Allenamento 9 settembre 2024**
+**Allenamento 09 settembre 2024**
 
 - C1x3: 10 superman, 1’ cobra position (stretch), 1’ plank commando, 10 wall angels [How To Do Wall Angels - Tangelo Health](https://www.youtube.com/watch?v=ywYi4rBhRBQ), 1’ posa del bambino (stretch)
 - C2x4: riscaldamento alla sbarra poi max pull up negativa lenta
@@ -659,7 +659,7 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C3x3: 10 good morning, 20 reverse crunch, 10 slanci laterali quadrupedia elastico
 - C4x2: 5 push up
 
-**Allenamento 2 dicembre 2024**
+**Allenamento 02 dicembre 2024**
 
 - 3x20 calf raise
 - 1x30 air squat
@@ -667,13 +667,13 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - 4x10 row cassa d’acqua single arm [https://youtu.be/DMo3HJoawrU?si=eOPYH702ZgsflNav](https://youtu.be/DMo3HJoawrU?si=eOPYH702ZgsflNav)
 - C1x3: 1’ plank, 30 crunch talloni, 10 leg raise, 10 push up, 10 dips gambe tese (aumentiamo la difficoltà),
 
-**Allenamento 7 dicembre 2024**
+**Allenamento 07 dicembre 2024**
 
 - C1x2: 1” step up, 30” mountain climbers, 5 push up, 5 squat
 - C2x3: 30 squat, 10 bar row, 7 affondi, 10 dips
 - C3x3: 10 push up, 20 knee to chest, 20 crunch, 20 glute bridge
 
-**Allenamento 9 dicembre 2024**
+**Allenamento 09 dicembre 2024**
 
 - Riscaldamento [10 Minuti di Riscaldamento Total Body o Mini Allenamento Per Principianti](https://www.youtube.com/watch?v=Uq86HTbUE8g&t=230s)
 - C1x3: (megacircuito 10 esercizi): 20 goblet squat cassa d’acqua, 10 affondi, 20 glute bridge bottiglie, 15 stacchi con cassa d'acqua, 15 Arnold press bottiglie, 15 alzate a 90° bottiglie, 20 leg raise, 20 crunch, 12 push up, 15 dips panca.
@@ -706,7 +706,7 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C2x5: (**1’ rest**): 25 squat, 20 MCC
 - C3x2: 50 GB elastico, 15 slanci laterali quadrupedia elastico
 
-**Allenamento 3 gennaio 2025**
+**Allenamento 03 gennaio 2025**
 
 - C1x2: 50 twist peso, 30 crunch molleggiati, 10 abs ball
 - C2x4: MAX trazioni negative, 10 squat jump elastico
@@ -822,7 +822,7 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C3x4: 10 bar row, 30 squat
 - C4x3: 10 dips, 8 push up, 20 knee to chest
 
-**Allenamento 4 aprile 2025**
+**Allenamento 04 aprile 2025**
 
 - C1x3: 20 affondi laterali alternati, max pull up con mano dx davanti (poi sx) negativa lenta
 - C2x3: 10 diamond push up, 10 leg raise, 20 crunch laterali
@@ -860,3 +860,11 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 
 - Riscaldamento: [Esercizi Di Riscaldamento Total Body Senza Salti (7 Minuti)](https://www.youtube.com/watch?v=xWPkMyyZDzM)
 - [ALLENAMENTO FULL BODY SENZA ATTREZZI IN 10 MINUTI](https://www.youtube.com/watch?v=CjpsIOyLwKA) x3
+
+**Allenamento mercoledì 07 maggio 2025**
+
+- Riscaldamento [10 Minuti di Riscaldamento Total Body o Mini Allenamento Per Principianti](https://www.youtube.com/watch?v=Uq86HTbUE8g&t=230s)
+- C1x4: 12 push up, 12 dips, 30” mountain climbers, 30” plank
+- C2x3: 20 squat, 20 glute bridge, 20 crunch, 12 kick back per gamba
+- C3x2: 45” bicycle crunch, 10 superman, 5 yoga push up
+- Stretching

@@ -1,17 +1,13 @@
 import Groq from 'groq-sdk';
 import { format } from 'date-fns';
 import { it } from 'date-fns/locale';
-import { Database } from 'bun:sqlite';
-import type { Exercise, Training, TrainingLevel, Equipment } from './src/types';
+import type { Exercise, Training, TrainingLevel, Equipment } from './types';
+import { db } from "./db/db";
 
 const GROQ_API_KEY = Bun.env.GROQ_API_KEY;
 const LLM_MODEL = Bun.env.LLM_MODEL;
 
 const groq = new Groq({ apiKey: GROQ_API_KEY });
-const db = new Database('data/sgt.hartman.sqlite', {
-  create: true,
-  strict: true,
-});
 
 async function generateTraining(
   exercises: Exercise[],
@@ -64,6 +60,7 @@ async function generateTraining(
 
           Per i circuiti indica serie, ripetizioni (o tempo di esecuzione in secondi se l'esercizio non prevede ripetizioni), ed eventuali tempi di recupero per ogni esercizio.
           Ometti le parti indicate come opzionali se non sono funzionali all'allenamento.
+          L'allenamento deve variare e non deve ripetere esattamente gli allenamenti precedenti: dev'essere studiato per aiutarmi a migliorare le mie prestazioni sulla base degli ultimi allenamenti.
           L'allenamento deve rispettare il seguente formato Markdown:
 
          **Allenamento [data in in italiano in formato EEEE dd LLLL yyyy]**
@@ -90,7 +87,7 @@ async function generateTraining(
 }
 
 function getExercises(): Exercise[] {
-  const query = db.query<Exercise, {}>(`
+  const query = db.prepare<Exercise, {}>(`
     SELECT id, name, categories, variations, equipments
     FROM exercises;
   `);
@@ -113,7 +110,7 @@ function getEquipments(): string[] {
 }
 
 function getLastTrainings(numberOfTraining: number = 3): Training[] {
-  const query = db.query<Training, number>(`
+  const query = db.prepare<Training, number>(`
     SELECT *
     FROM trainings
     ORDER BY date DESC
@@ -126,7 +123,7 @@ function getLastTrainings(numberOfTraining: number = 3): Training[] {
 async function main() {
   const exercises = getExercises();
   const equipments = getEquipments();
-  const lastTrainings = getLastTrainings(5);
+  const lastTrainings = getLastTrainings();
   const training = await generateTraining(exercises, equipments, lastTrainings);
 
   console.log(training);

@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "format": "prettier --write .",
-    "initdb": "bun run src/initDb.ts"
+    "db:init": "rm -f data/sgt.hartman.sqlite && bun run src/db/init.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"

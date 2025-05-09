@@ -1,9 +1,9 @@
-import { Database } from 'bun:sqlite';
 import { join } from 'node:path';
 import { readFile } from 'node:fs/promises';
-import type { Training } from "./types";
-import { parse } from 'date-fns';
+import { parse, format } from 'date-fns';
 import { it } from 'date-fns/locale';
+import type { Training } from '../types';
+import { db } from './db';
 
 type Exercise = {
   name: string;
@@ -27,13 +27,8 @@ type Exercises = {
   video: Video[];
 };
 
-const EXERCISES_FILE_PATH = join(__dirname, '../data/exercises.json');
-const TRAINING_FILE_PATH = join(__dirname, '../data/trainings.md');
-
-const db = new Database('data/sgt.hartman.sqlite', {
-  create: true,
-  strict: true,
-});
+const EXERCISES_FILE_PATH = join(__dirname, '../../data/exercises.json');
+const TRAINING_FILE_PATH = join(__dirname, '../../data/trainings.md');
 
 async function getExercises(): Promise<Exercises> {
   const exercises = await readFile(EXERCISES_FILE_PATH, 'utf8');
@@ -43,7 +38,7 @@ async function getExercises(): Promise<Exercises> {
 
 function parseDate(dateString: string): Date {
   const withDay = parse(dateString, 'EEEE dd LLLL yyyy', new Date(), {
-    locale: it
+    locale: it,
   });
 
   if (!isNaN(withDay.getTime())) {
@@ -51,7 +46,7 @@ function parseDate(dateString: string): Date {
   }
 
   const withoutDay = parse(dateString, 'dd LLLL yyyy', new Date(), {
-    locale: it
+    locale: it,
   });
 
   if (!isNaN(withoutDay.getTime())) {
@@ -62,8 +57,9 @@ function parseDate(dateString: string): Date {
 }
 
 export async function getTrainings(): Promise<Training[]> {
-  const TRANING_REGEX = /\*\*(Allenamento [^*]+)\*\*\s*([\s\S]*?)(?=\*\*Allenamento|\s*$)/g;
-  const TITLE_REGEX = /(Allenamento)\s(.*)/;
+  const TRANING_REGEX =
+    /\*\*(Allenamento [^*]+)\*\*\s*([\s\S]*?)(?=\*\*Allenamento|\s*$)/g;
+  const TITLE_REGEX = /(Allenamento)\s([\w\dàèéìòóù\s]*)/;
 
   const content = await readFile(TRAINING_FILE_PATH, 'utf-8');
   const trainings: Training[] = [];
@@ -76,7 +72,9 @@ export async function getTrainings(): Promise<Training[]> {
     const titleMatch = title.match(TITLE_REGEX);
 
     if (!titleMatch) {
-      throw new Error(`Invalid title: ${title}. Specify a title in the format: **Allenamento **EEEE dd LLLL yyyy`);
+      throw new Error(
+        `Invalid title: ${title}. Specify a title in the format: **Allenamento **EEEE dd LLLL yyyy`,
+      );
     }
 
     const dateString = titleMatch[2];
@@ -84,8 +82,8 @@ export async function getTrainings(): Promise<Training[]> {
 
     trainings.push({
       training: `${title}\n${training}`,
-      date,
-    })
+      date: format(date, 'yyyy-MM-dd'),
+    });
   }
 
   return trainings;
@@ -179,7 +177,7 @@ function storeTraining(training: Training): void {
 
   insert.run({
     training: training.training,
-    date: training.date.toISOString(),
+    date: training.date,
   });
 }
 

@@ -1,4 +1,3 @@
-
 export type Exercise = {
   id: number;
   name: string;
@@ -14,7 +13,7 @@ export type Equipment = {
 export type Training = {
   id?: number;
   training: string;
-  date: Date;
+  date: string; // ISO 8601 date
 };
 
 export type TrainingLevel = 'facile' | 'intermedio' | 'difficile';
