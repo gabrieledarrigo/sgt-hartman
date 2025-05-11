@@ -16,4 +16,8 @@ export type Training = {
   date: string; // ISO 8601 date
 };
 
-export type TrainingLevel = 'facile' | 'intermedio' | 'difficile';
+export enum TrainingLevel {
+  facile = 'facile',
+  intermedio = 'intermedio',
+  difficile = 'difficile',
+}

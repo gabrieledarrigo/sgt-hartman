@@ -1,7 +1,12 @@
 import { format } from 'date-fns';
 import { it } from 'date-fns/locale';
 import { db } from './db/db';
-import type { Exercise, Training, TrainingLevel, Equipment } from './types';
+import {
+  type Exercise,
+  type Training,
+  type Equipment,
+  TrainingLevel,
+} from './types';
 import type Groq from 'groq-sdk';
 
 export function getExercises(): Exercise[] {
@@ -44,7 +49,7 @@ export async function generateTraining(
   exercises: Exercise[],
   equipments: string[],
   lastTrainings: Training[],
-  trainingLevel: TrainingLevel = 'intermedio',
+  trainingLevel: TrainingLevel = TrainingLevel.intermedio,
   desiredDuration: number = 60,
   notes?: string,
 ): Promise<Training> {
