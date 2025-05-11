@@ -49,8 +49,8 @@ export async function generateTraining(
   exercises: Exercise[],
   equipments: string[],
   lastTrainings: Training[],
-  trainingLevel: TrainingLevel = TrainingLevel.intermedio,
-  desiredDuration: number = 60,
+  level: TrainingLevel = TrainingLevel.intermedio,
+  duration: number = 60,
   notes?: string,
 ): Promise<Training> {
   const completion = await groq.chat.completions.create({
@@ -74,8 +74,8 @@ export async function generateTraining(
           Genera un allenamento per oggi: ${format(new Date(), 'EEEE dd LLLL yyyy', { locale: it })} basato sui miei dati storici.
 
           DATI UTENTE:
-          - Livello: ${trainingLevel}
-          - Durata desiderata: ${desiredDuration} minuti
+          - Livello: ${level}
+          - Durata desiderata: ${duration} minuti
           - Note aggiuntive o preferenze: ${notes ? notes : 'Nessuna nota fornita dall utente.'}
 
           DATABASE ESERCIZI:
