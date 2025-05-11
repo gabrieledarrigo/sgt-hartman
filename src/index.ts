@@ -60,8 +60,6 @@ const options = program.opts<{
   notes?: string;
 }>();
 
-console.log(options);
-
 async function main(): Promise<Training> {
   const exercises = getExercises();
   const equipments = getEquipments();

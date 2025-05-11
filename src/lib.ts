@@ -65,13 +65,13 @@ export async function generateTraining(
           - Il livello di difficoltà dell'allenamento e la durata desiderata in minuti.
           - Alcuni allenamenti recenti, così che l'allenamento generato tenga conto del pregresso dell'utente che alleni.
           - L'attrezzatura che puoi utilizzare per creare l'allenamento.
-          - Opzionalmente, alcune note scritte dall'utente con richieste specifiche o preferenze riguardo all'allenamento.
+          - Opzionalmente, alcune note scritte dall'utente con richieste specifiche o preferenze riguardo all'allenamento. Se presenti, usale come base per creare l'allenamento.
         `,
       },
       {
         role: 'user',
         content: `
-          Genera un allenamento per oggi: ${format(new Date(), 'EEEE dd LLLL yyyy', { locale: it })} basato sui miei dati storici.
+          Genera un allenamento per oggi: ${format(new Date(), 'EEEE dd LLLL yyyy', { locale: it })}.
 
           DATI UTENTE:
           - Livello: ${level}
@@ -96,7 +96,7 @@ export async function generateTraining(
 
           Per i circuiti indica serie, ripetizioni (o tempo di esecuzione in secondi se l'esercizio non prevede ripetizioni), ed eventuali tempi di recupero per ogni esercizio.
           Ometti le parti indicate come opzionali se non sono funzionali all'allenamento.
-          L'allenamento deve variare e non deve ripetere esattamente gli allenamenti precedenti: dev'essere studiato per aiutarmi a migliorare le mie prestazioni sulla base degli ultimi allenamenti.
+          L'allenamento deve variare e non deve ripetere esattamente i circuiti degli allenamenti precedenti. L'allenamento dev'essere studiato per aiutarmi a migliorare le mie prestazioni sulla base degli ultimi allenamenti.
           L'allenamento deve rispettare il seguente formato Markdown:
 
          **Allenamento [data in in italiano in formato EEEE dd LLLL yyyy]**
