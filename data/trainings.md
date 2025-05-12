@@ -868,3 +868,10 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C2x3: 20 squat, 20 glute bridge, 20 crunch, 12 kick back per gamba
 - C3x2: 45” bicycle crunch, 10 superman, 5 yoga push up
 - Stretching
+
+**Allenamento lunedì 12 maggio 2025**
+
+- Stretching dinamico, 1’ step up
+- C1x4: 20 squat, 20 good morning, 30” plank, 12 push up
+- C2x3: 12 bar row, 20 calf raise, 20 crunch, 10 affondi
+- C3x3: 12 dips, 20 glute bridge, 40 crunch talloni
