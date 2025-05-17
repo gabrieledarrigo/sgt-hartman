@@ -30,12 +30,21 @@ type Exercises = {
 const EXERCISES_FILE_PATH = join(__dirname, '../../data/exercises.json');
 const TRAINING_FILE_PATH = join(__dirname, '../../data/trainings.md');
 
+/**
+ * Reads and parses the exercises data from the JSON file
+ * @returns {Promise<Exercises>} A promise that resolves to the exercises data
+ */
 async function getExercises(): Promise<Exercises> {
   const exercises = await readFile(EXERCISES_FILE_PATH, 'utf8');
 
   return JSON.parse(exercises);
 }
 
+/**
+ * Parses an Italian date string into a Date object
+ * @param {string} dateString - The date string to parse in Italian format
+ * @returns {Date} The parsed date or current date if parsing fails
+ */
 function parseDate(dateString: string): Date {
   const withDay = parse(dateString, 'EEEE dd LLLL yyyy', new Date(), {
     locale: it,
@@ -56,6 +65,10 @@ function parseDate(dateString: string): Date {
   return new Date();
 }
 
+/**
+ * Extracts training data from markdown file
+ * @returns {Promise<Training[]>} A promise that resolves to an array of training objects
+ */
 export async function getTrainings(): Promise<Training[]> {
   const TRANING_REGEX =
     /\*\*(Allenamento [^*]+)\*\*\s*([\s\S]*?)(?=\*\*Allenamento|\s*$)/g;
@@ -89,6 +102,9 @@ export async function getTrainings(): Promise<Training[]> {
   return trainings;
 }
 
+/**
+ * Creates database tables if they don't exist
+ */
 function createTables(): void {
   db.run(`
     CREATE TABLE IF NOT EXISTS exercises (
@@ -123,6 +139,10 @@ function createTables(): void {
   `);
 }
 
+/**
+ * Inserts an exercise into the database
+ * @param {Exercise} exercise - The exercise object to store
+ */
 function storeExercises(exercise: Exercise): void {
   const insert = db.prepare(
     `
@@ -139,6 +159,10 @@ function storeExercises(exercise: Exercise): void {
   });
 }
 
+/**
+ * Inserts a video into the database
+ * @param {Video} video - The video object to store
+ */
 function storeVideo(video: Video): void {
   const insert = db.prepare(
     `
@@ -154,6 +178,10 @@ function storeVideo(video: Video): void {
   });
 }
 
+/**
+ * Inserts an equipment type into the database
+ * @param {string} type - The equipment type to store
+ */
 function storeEquipments(type: string): void {
   const insert = db.prepare(
     `
@@ -167,6 +195,10 @@ function storeEquipments(type: string): void {
   });
 }
 
+/**
+ * Inserts a training into the database
+ * @param {Training} training - The training object to store
+ */
 function storeTraining(training: Training): void {
   const insert = db.prepare(
     `
@@ -181,6 +213,10 @@ function storeTraining(training: Training): void {
   });
 }
 
+/**
+ * Initializes the database by loading data from files and storing it in the database
+ * @returns {Promise<void>} A promise that resolves when initialization is complete
+ */
 async function initDb(): Promise<void> {
   const exercises = await getExercises();
   const trainings = await getTrainings();
