@@ -47,13 +47,13 @@
       "name": "Panca piana con peso",
       "categories": ["parte_superiore", "petto", "push"],
       "variants": ["cassa d'acqua"],
-      "attrezzatura": ["cassa d'acqua", "pesi", "panca"]
+      "equipments": ["cassa d'acqua", "pesi", "panca"]
     },
     {
       "name": "Croci manubri",
       "categories": ["parte_superiore", "petto", "push"],
       "variants": ["croci in glute bridge", "con bottiglie"],
-      "attrezzatura": ["bottiglie come pesi", "pesi"],
+      "equipments": ["bottiglie come pesi", "pesi"],
       "video": {
         "croci in glute bridge": "https://www.youtube.com/watch?v=tLj74_p5Nj8"
       }
@@ -62,19 +62,19 @@
       "name": "Spinte da seduto con peso",
       "categories": ["parte_superiore", "petto", "spalle", "push"],
       "variants": ["cassa d'acqua"],
-      "attrezzatura": ["cassa d'acqua", "pesi"]
+      "equipments": ["cassa d'acqua", "pesi"]
     },
     {
       "name": "Bar row",
       "categories": ["parte_superiore", "schiena", "pull"],
       "variants": ["single arm"],
-      "attrezzatura": ["sbarra per trazioni"]
+      "equipments": ["sbarra per trazioni"]
     },
     {
       "name": "Row cassa d'acqua",
       "categories": ["parte_superiore", "schiena", "pull"],
       "variants": ["single arm"],
-      "attrezzatura": ["cassa d'acqua"],
+      "equipments": ["cassa d'acqua"],
       "video": {
         "single arm": "https://youtu.be/DMo3HJoawrU"
       }
@@ -89,7 +89,7 @@
         "presa supina",
         "piedi a terra"
       ],
-      "attrezzatura": ["sbarra per trazioni"],
+      "equipments": ["sbarra per trazioni"],
       "video": {
         "piedi a terra": "https://www.youtube.com/watch?v=E_mdAsjzkHM",
         "con salto": "https://www.youtube.com/watch?v=nmjiTFIm5QU"
@@ -107,7 +107,7 @@
       "name": "Reverse hyperextension",
       "categories": ["parte_superiore", "schiena", "core", "lombari"],
       "variants": ["su panca", "sul bordo del divano"],
-      "attrezzatura": ["panca"]
+      "equipments": ["panca"]
     },
     {
       "name": "Good morning",
@@ -118,7 +118,7 @@
         "femorali"
       ],
       "variants": ["con bottiglie", "con pesi"],
-      "attrezzatura": ["bottiglie come pesi", "pesi"]
+      "equipments": ["bottiglie come pesi", "pesi"]
     },
     {
       "name": "Deadlift",
@@ -130,7 +130,7 @@
         "glutei"
       ],
       "variants": ["con peso"],
-      "attrezzatura": ["cassa d'acqua", "pesi"]
+      "equipments": ["cassa d'acqua", "pesi"]
     },
     {
       "name": "RDL (stacchi rumeni)",
@@ -142,7 +142,7 @@
         "glutei"
       ],
       "variants": ["single leg", "con bottiglie", "con cassa d'acqua"],
-      "attrezzatura": ["bottiglie come pesi", "cassa d'acqua"],
+      "equipments": ["bottiglie come pesi", "cassa d'acqua"],
       "video": {
         "single leg": "https://www.youtube.com/watch?v=MsE_T9nAsSE",
         "alternativa": "https://www.youtube.com/watch?v=IXzdtAeM1qk"
@@ -152,19 +152,19 @@
       "name": "Alzate laterali",
       "categories": ["parte_superiore", "spalle", "push"],
       "variants": ["con bottiglie", "con pesi"],
-      "attrezzatura": ["bottiglie come pesi", "pesi"]
+      "equipments": ["bottiglie come pesi", "pesi"]
     },
     {
       "name": "Alzate a 90°",
       "categories": ["parte_superiore", "spalle", "push"],
       "variants": ["con bottiglie"],
-      "attrezzatura": ["bottiglie come pesi"]
+      "equipments": ["bottiglie come pesi"]
     },
     {
       "name": "Alzate a 360°",
       "categories": ["parte_superiore", "spalle", "push"],
       "variants": ["con bottiglie"],
-      "attrezzatura": ["bottiglie come pesi"],
+      "equipments": ["bottiglie come pesi"],
       "video": {
         "standard": "https://www.youtube.com/watch?v=kmkUVxJqnX4"
       }
@@ -173,7 +173,7 @@
       "name": "Arnold press",
       "categories": ["parte_superiore", "spalle", "push"],
       "variants": ["con bottiglie"],
-      "attrezzatura": ["bottiglie come pesi"]
+      "equipments": ["bottiglie come pesi"]
     },
     {
       "name": "Wall angels",
@@ -192,13 +192,13 @@
       "name": "Dips",
       "categories": ["parte_superiore", "tricipiti", "petto", "push"],
       "variants": ["su panca", "su parallele", "gambe tese", "micro dips"],
-      "attrezzatura": ["panca", "parallele"]
+      "equipments": ["panca", "parallele"]
     },
     {
       "name": "French press",
       "categories": ["parte_superiore", "tricipiti", "push"],
       "variants": ["su panca piana", "con bottiglie", "seduto"],
-      "attrezzatura": ["bottiglie come pesi", "pesi", "panca"],
+      "equipments": ["bottiglie come pesi", "pesi", "panca"],
       "video": {
         "standard": "https://www.youtube.com/watch?v=rcUE0yE7mdM",
         "su panca piana": "https://www.youtube.com/watch?v=efDUhuBup0s"
@@ -218,7 +218,7 @@
       "name": "Curl bicipiti",
       "categories": ["parte_superiore", "bicipiti", "pull"],
       "variants": ["in piedi", "seduto", "panca scott (schienale sedia)"],
-      "attrezzatura": ["bottiglie come pesi", "pesi"],
+      "equipments": ["bottiglie come pesi", "pesi"],
       "video": {
         "panca scott": "https://www.youtube.com/watch?v=JEWRKlaY3zQ"
       }
@@ -227,7 +227,7 @@
       "name": "Hammer curl",
       "categories": ["parte_superiore", "bicipiti", "pull"],
       "variants": ["con bottiglie", "seduto"],
-      "attrezzatura": ["bottiglie come pesi", "pesi"],
+      "equipments": ["bottiglie come pesi", "pesi"],
       "video": {
         "standard": "https://www.youtube.com/watch?v=OPqe0kCxmR8"
       }
@@ -248,7 +248,7 @@
         "sumo",
         "squat elastico e apri-chiudi"
       ],
-      "attrezzatura": [
+      "equipments": [
         "elastico",
         "cassa d'acqua",
         "bottiglie come pesi",
@@ -279,19 +279,19 @@
       "name": "Pistol squat",
       "categories": ["parte_inferiore", "quadricipiti", "equilibrio"],
       "variants": ["su panca"],
-      "attrezzatura": ["panca"]
+      "equipments": ["panca"]
     },
     {
       "name": "Bulgarian split squat",
       "categories": ["parte_inferiore", "quadricipiti", "glutei", "equilibrio"],
       "variants": [],
-      "attrezzatura": ["panca", "rialzo"]
+      "equipments": ["panca", "rialzo"]
     },
     {
       "name": "Step up",
       "categories": ["parte_inferiore", "quadricipiti", "glutei", "cardio"],
       "variants": ["alternati"],
-      "attrezzatura": ["rialzo", "panca"]
+      "equipments": ["rialzo", "panca"]
     },
     {
       "name": "Leg extension",
@@ -306,7 +306,7 @@
       "name": "Hamstring curl",
       "categories": ["parte_inferiore", "femorali"],
       "variants": ["standing curls femorali single leg elastico", "bodyweight"],
-      "attrezzatura": ["elastico"],
+      "equipments": ["elastico"],
       "video": {
         "standing": "https://www.youtube.com/watch?v=LaDKpYN9FDw",
         "bodyweight": "https://www.youtube.com/watch?v=bRWC-Cq6_Zw"
@@ -323,7 +323,7 @@
         "spalle appoggiate cassa d'acqua (hip thrust)",
         "butterfly piedi su rialzo"
       ],
-      "attrezzatura": ["elastico", "cassa d'acqua", "pesi", "rialzo"],
+      "equipments": ["elastico", "cassa d'acqua", "pesi", "rialzo"],
       "video": {
         "single leg": "https://www.youtube.com/watch?v=fDxl-0uZMJo",
         "hip thrust": "https://www.youtube.com/watch?v=3ENrRyaAFEQ"
@@ -333,7 +333,7 @@
       "name": "Kick back",
       "categories": ["parte_inferiore", "glutei"],
       "variants": ["gamba piegata", "gamba tesa", "con elastico"],
-      "attrezzatura": ["elastico"],
+      "equipments": ["elastico"],
       "video": {
         "gamba piegata": "https://www.youtube.com/watch?v=FOKM36ZAxlc"
       }
@@ -346,7 +346,7 @@
         "in quadrupedia con elastico",
         "sdraiato sul fianco con elastico"
       ],
-      "attrezzatura": ["elastico"],
+      "equipments": ["elastico"],
       "video": {
         "in quadrupedia": "https://www.youtube.com/watch?v=li6_OYwtNDU"
       }
@@ -355,7 +355,7 @@
       "name": "Passo granchio",
       "categories": ["parte_inferiore", "glutei", "abduttori"],
       "variants": ["con elastico"],
-      "attrezzatura": ["elastico"]
+      "equipments": ["elastico"]
     },
     {
       "name": "Calf raise",
@@ -392,7 +392,7 @@
       "name": "Leg raise",
       "categories": ["core", "addominali"],
       "variants": ["alle parallele"],
-      "attrezzatura": ["parallele"]
+      "equipments": ["parallele"]
     },
     {
       "name": "Knee to chest",
@@ -441,19 +441,19 @@
       "name": "Twist",
       "categories": ["core", "addominali", "obliqui"],
       "variants": ["con peso"],
-      "attrezzatura": ["pesi", "bottiglie come pesi"]
+      "equipments": ["pesi", "bottiglie come pesi"]
     },
     {
       "name": "Addominali ball",
       "categories": ["core", "addominali"],
       "variants": [],
-      "attrezzatura": ["ball"]
+      "equipments": ["ball"]
     },
     {
       "name": "Addominali alle parallele",
       "categories": ["core", "addominali"],
       "variants": [],
-      "attrezzatura": ["parallele"]
+      "equipments": ["parallele"]
     },
     {
       "name": "Cobra position",
@@ -464,13 +464,13 @@
       "name": "GHD hyper extension alla sbarra",
       "categories": ["core", "lombari", "parte_superiore", "schiena"],
       "variants": [],
-      "attrezzatura": ["sbarra per trazioni"]
+      "equipments": ["sbarra per trazioni"]
     },
     {
       "name": "GHD sit up alla sbarra",
       "categories": ["core", "addominali"],
       "variants": [],
-      "attrezzatura": ["sbarra per trazioni"]
+      "equipments": ["sbarra per trazioni"]
     },
     {
       "name": "Distensioni braccia in superman position",
@@ -525,7 +525,7 @@
       "name": "Box jump",
       "categories": ["cardio", "parte_inferiore", "esplosività"],
       "variants": ["over"],
-      "attrezzatura": ["rialzo"],
+      "equipments": ["rialzo"],
       "video": {
         "standard": "https://www.youtube.com/watch?v=NBY9-kTuHEk",
         "over": "https://www.youtube.com/watch?v=HHX_8rNIrYE",
@@ -536,7 +536,7 @@
       "name": "Thruster",
       "categories": ["combinati", "full_body", "parte_inferiore", "spalle"],
       "variants": ["con bottiglie", "con pesi"],
-      "attrezzatura": ["bottiglie come pesi", "pesi"],
+      "equipments": ["bottiglie come pesi", "pesi"],
       "video": {
         "standard": "https://www.youtube.com/watch?v=aea5BGj9a8Y"
       }

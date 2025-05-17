@@ -58,59 +58,68 @@ export async function generateTraining(
       {
         role: 'system',
         content: `
-          Sei un personal trainer esperto, specializzato nell'allenamento a corpo libero.
-          Il tuo compito è generare un allenamento a corpo libero partendo da un database di esercizi in formato JSON che ti verrà allegato nel corpo di ogni richiesta.
-          Oltre al database di esercizi, ti verranno forniti:
-          
-          - Il livello di difficoltà dell'allenamento e la durata desiderata in minuti.
-          - Alcuni allenamenti recenti, così che l'allenamento generato tenga conto del pregresso dell'utente che alleni.
-          - L'attrezzatura che puoi utilizzare per creare l'allenamento.
-          - Opzionalmente, alcune note scritte dall'utente con richieste specifiche o preferenze riguardo all'allenamento. Se presenti, usale come base per creare l'allenamento.
-        `,
+          Sei un personal trainer esperto, specializzato in allenamenti a corpo libero.
+          Il tuo compito è creare un allenamento efficace, originale e personalizzato, usando un database di esercizi fornito in formato JSON.
+          Tieni presente le seguenti regole:
+
+          - Non ripetere esattamente esercizi, combinazioni o strutture già presenti negli allenamenti recenti.
+          - Usa creativamente gli esercizi e i video disponibili, nel rispetto dell'attrezzatura consentita.
+          - Adatta l’allenamento al livello specificato e alla durata desiderata.
+          - Se sono presenti note dell’utente, rispettale con priorità assoluta.
+          - L’obiettivo è variare gli stimoli allenanti per migliorare le prestazioni generali
+          - Gli allenamenti recenti ti vengono forniti come riferimento per calcolare la progressione dell’utente.
+
+          Genera l’allenamento direttamente nel formato Markdown richiesto, senza aggiungere spiegazioni.
+        `.trim(),
       },
       {
         role: 'user',
         content: `
-          Genera un allenamento per oggi: ${format(new Date(), 'EEEE dd LLLL yyyy', { locale: it })}.
+        Genera un allenamento per oggi: ${format(new Date(), 'EEEE dd LLLL yyyy', { locale: it })}.
 
-          DATI UTENTE:
-          - Livello: ${level}
-          - Durata desiderata: ${duration} minuti
-          - Note aggiuntive o preferenze: ${notes ? notes : 'Nessuna nota fornita dall utente.'}
+        DATI UTENTE:
+        - Livello: ${level}
+        - Durata desiderata: ${duration} minuti
+        - Note aggiuntive o preferenze: ${notes ? notes : 'Nessuna nota fornita dall’utente.'}
 
-          DATABASE ESERCIZI:
-          ${JSON.stringify(exercises)}
+        DATABASE ESERCIZI:
+        ${JSON.stringify(exercises)}
 
-          ATTREZZATURA:
-          ${equipments.join(',')}
+        ATTREZZATURA DISPONIBILE:
+        ${equipments.join(', ')}
 
-          ALLENAMENTI RECENTI:
-          ${lastTrainings.map((training) => training.training).join('\n\n')}
+        IMPORTANTE:
+        Evita la ripetizione esatta di esercizi, strutture o combinazioni presenti negli allenamenti precedenti. 
+        L’allenamento di oggi deve essere vario, originale e diverso. 
+        Usa gli allenamenti precedenti solo per evitare sovrapposizioni. 
+        Sorprendi l’utente con una combinazione efficace, dinamica e coerente con il suo livello.
 
-          Crea un allenamento completo composto da:
+        FORMATO ATTESO:
+        - Una fase di riscaldamento (opzionale), eventualmente con link a un video tutorial
+        - Una parte principale composta da una o più serie di circuiti (C1, C2, ...)
+        - Una fase di stretching (opzionale)
+        - Una breve descrizione motivazionale o ironica in stile Sgt. Hartman (opzionale)
 
-          - Una fase di riscaldamento, opzionale
-          - Una parte principale composta da una serie di circuiti 
-          - Una fase di stretching finale, opzionale
-          - Una breve descrizione dell'allenamento composta al massimo da una frase, nello stile del Sgt Hartman di Full Metal jacket, opzionale.
+        Ogni circuito deve includere:
+        - Numero di serie
+        - Ripetizioni o tempo per esercizio
+        - Eventuali pause/recuperi
 
-          Per i circuiti indica serie, ripetizioni (o tempo di esecuzione in secondi se l'esercizio non prevede ripetizioni), ed eventuali tempi di recupero per ogni esercizio.
-          Ometti le parti indicate come opzionali se non sono funzionali all'allenamento.
-          L'allenamento deve variare e non deve ripetere esattamente i circuiti degli allenamenti precedenti. L'allenamento dev'essere studiato per aiutarmi a migliorare le mie prestazioni sulla base degli ultimi allenamenti.
-          L'allenamento deve rispettare il seguente formato Markdown:
+        L’allenamento deve essere generato nel seguente formato Markdown:
 
-         **Allenamento [data in in italiano in formato EEEE dd LLLL yyyy]**
-          - [Riscaldamento] (opzionale) (link a un video tutorial, opzionale)
-          - C1x[N]: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
-          - C2x[N]: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
-          - CNx[N]: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
-          - [Stretching] (opzionale)
+        **Allenamento [data in italiano in formato EEEE dd LLLL yyyy]**
+        - [Riscaldamento] (opzionale)
+        - C1x[N]: [tempo o ripetizioni] [Esercizio 1], [tempo o ripetizioni] [Esercizio 2], ...
+        - C2x[N]: ...
+        - CNx[N]: ...
+        - [Stretching] (opzionale)
 
-          ### Descrizione (opzionale)
-          - [Dettaglio descrizione]
+        ### Descrizione (opzionale)
+        - [Frase motivazionale o ironica, massimo una frase]
 
-          Non aggiungere note o spiegazioni aggiuntive.
-        `,
+        ALLENAMENTI RECENTI:
+        ${lastTrainings.map((training) => training.training).join('\n\n')}
+            `.trim(),
       },
     ],
     model,
