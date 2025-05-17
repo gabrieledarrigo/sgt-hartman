@@ -101,9 +101,9 @@ export async function generateTraining(
 
          **Allenamento [data in in italiano in formato EEEE dd LLLL yyyy]**
           - [Riscaldamento] (opzionale) (link a un video tutorial, opzionale)
-          - **C1x[N]**: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
-          - **C2x[N]**: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
-          - **CNx[N]**: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
+          - C1x[N]: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
+          - C2x[N]: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
+          - CNx[N]: [ripetizioni o tempo in secondi] [Esercizio 1], [ripetizioni o tempo in secondi] [Esercizio 2], [ripetizioni o tempo in secondi] [Esercizio N]
           - [Stretching] (opzionale)
 
           ### Descrizione (opzionale)

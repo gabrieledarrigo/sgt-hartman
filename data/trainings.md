@@ -875,3 +875,16 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C1x4: 20 squat, 20 good morning, 30” plank, 12 push up
 - C2x3: 12 bar row, 20 calf raise, 20 crunch, 10 affondi
 - C3x3: 12 dips, 20 glute bridge, 40 crunch talloni
+
+**Allenamento mercoledì 14 maggio 2025**
+
+- C1x3: 10 superman pesi 3kg, 10 sit up pesi 3kg, 15 squat pesi 3 kg, 15 thruster pesi 3 kg
+- C2x4: 5 dips alla sbarra, 20 affondi con pesi 3 kg
+- C3x3: 20 GHD hyper extension alla sbarra, 20 GHD sit up alla sbarra
+
+**Allenamento venerdì 16 maggio 2025**
+
+- C1x3: 30 sit up laterali; 30 affondi laterali; 20 push up
+- C2x3: MAX pull up negativa lenta; 10 slanci laterali in quadrupedia elastico
+- C3x3: MAX dips; 30 squat con rimbalzo
+- C4x1: 100 crunch

@@ -461,6 +461,18 @@
       "variants": []
     },
     {
+      "name": "GHD hyper extension alla sbarra",
+      "categories": ["core", "lombari", "parte_superiore", "schiena"],
+      "variants": [],
+      "attrezzatura": ["sbarra per trazioni"]
+    },
+    {
+      "name": "GHD sit up alla sbarra",
+      "categories": ["core", "addominali"],
+      "variants": [],
+      "attrezzatura": ["sbarra per trazioni"]
+    },
+    {
       "name": "Distensioni braccia in superman position",
       "categories": ["core", "lombari", "parte_superiore", "spalle"],
       "variants": []
