@@ -888,3 +888,11 @@ Attrezzi necessari: cronometro e parallele (sostituibili con panca/sedia se in c
 - C2x3: MAX pull up negativa lenta; 10 slanci laterali in quadrupedia elastico
 - C3x3: MAX dips; 30 squat con rimbalzo
 - C4x1: 100 crunch
+
+**Allenamento lunedì 19 maggio 2025**
+
+- Riscaldamento: 5 minuti di corsa sul posto e stretching dinamico
+- C1x3: 25 mountain climbers, 15 squat molleggiati, 15 yoga push up
+- C2x3: MAX dips, 20 kick back, 30” bicycle crunch
+- C3x2: 20 box jump, 15 bird dog, 30” hollow hold position
+- Stretching: 5 minuti di stretching statico, focalizzandosi su gambe, schiena e spalle
